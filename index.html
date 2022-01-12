@@ -10,6 +10,7 @@
   <style>
     :root {
       font-size: 20px;
+      --app-height: 100%;
     }
     
     * {
@@ -21,22 +22,37 @@
     body {
       font-size: 1rem;
       font-family: sans-serif;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      height: var(--app-height);
     }
 
     .container {
       background-color: white;
-      color: black;
-      width: 100vw;
-      height: 100vh;
+      color: white;
+      width: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .container p {
-      background-color: yellow;
+      background-color: #ff5100;
       display: inline-block;
       padding: 5px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .container {
+        background-color: white;
+        color: white;
+      }
+
+      .container p {
+        background-color: #0066ff;
+      }
     }
     
     
@@ -47,5 +63,15 @@
   <div class="container">
     <p>Сайт наразі в розробці!</p>
   </div>
+
+  <!-- Врегулювання висоти -->
+  <script>
+    const appHeight = () => {
+      const doc = document.documentElement
+      doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+    }
+    window.addEventListener('resize', appHeight)
+    appHeight()
+  </script>
 </body>
 </html>
