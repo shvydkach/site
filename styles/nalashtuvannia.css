@@ -14,6 +14,7 @@
     --black: black;
   }
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --white: black;

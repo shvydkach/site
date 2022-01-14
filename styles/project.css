@@ -41,6 +41,7 @@
 body {
   font-size: 1rem;
   font-family: sans-serif;
+  line-height: 1.2;
   background-color: var(--white);
   color: var(--black);
 }
@@ -48,44 +49,12 @@ body {
 main {
   position: relative;
   min-height: 450px;
-  height: 90vh;
+  height: fit-content;
   width: 100vw;
-  padding: 60px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  max-width: 800px;
+  padding: 70px 25px;
 }
 
-.links {
-  max-height: 400px;
-  min-height: 250px;
-  height: 75%;
-  max-width: 600px;
-  min-width: 250px;
-  width: 90%;
-  padding-top: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.link {
-  margin: 10px;
-}
-
-.link-title {
-  margin-bottom: 3px;
-}
-
-.link-a,
-.link-a:visited,
-.link-a:active,
-.link-a:focus {
-  color: var(--black);
-  text-decoration: none;
-  border-bottom: 2px solid var(--black);
-  padding-bottom: 2px;
-  padding-left: 3px;
-  padding-right: 3px;
+.text {
+  margin-top: 35px;
 }
