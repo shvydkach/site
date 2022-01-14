@@ -32,8 +32,6 @@ btnTheme.addEventListener("click", () => {
   let theme = getCurrentTheme()
   let audio
 
-  console.log(theme)
-
   if (theme === "dark") {
     audio = document.querySelector(".theme-audio-on")
     theme = "light"

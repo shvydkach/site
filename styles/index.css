@@ -1,0 +1,270 @@
+:root {
+  /* Змінні кольорів */
+  --white: white;
+  --black: black;
+
+  /* Кореневий розмір шрифту */
+  font-size: 20px;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --white: white;
+    --black: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: black;
+    --black: white;
+  }
+}
+
+[color-scheme="light"] {
+  --white: white;
+  --black: black;
+}
+
+[color-scheme="dark"] {
+  --white: black;
+  --black: white;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1rem;
+  font-family: sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+  height: fit-content;
+}
+
+main {
+  position: relative;
+  min-height: 550px;
+  height: fit-content;
+  width: 100vw;
+  padding: 60px 0;
+  /* background-color: lightyellow; */
+}
+
+.categories {
+  width: 100%;
+  height: 50px;
+}
+
+/* MOBILE CATEGORIES styles */
+
+.categories-mobile {
+  width: 100%;
+  height: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  user-select: none;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categories-mobile-main {
+  width: 50%;
+  min-width: 200px;
+  max-width: 230px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-mobile-main {
+  background-color: white;
+  color: black;
+  height: auto;
+  width: auto;
+  padding: 3px 5px;
+  border-bottom: 3px solid black;
+  cursor: pointer;
+}
+
+.category-mobile-main-selected {
+  background-color: black;
+  color: white;
+}
+
+.categories-mobile-modal-btn {
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories-mobile-modal-btn span {
+  background-color: white;
+  color: black;
+  text-transform: capitalize;
+  padding: 2px 3px;
+  border-bottom: 3px solid black;
+}
+
+.categories-mobile-modal-btn span:active {
+  background-color: black;
+  color: white;
+}
+
+
+
+/* MOBILE CATEGORIES MODAL styles */
+
+.categories-mobile-modal {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  border: 3px solid black;
+  z-index: 12;
+  background-color: white;
+  color: black;
+  width: 500px;
+  max-width: 80%;
+  transform: scale(0);
+  transition: all 200ms ease-in-out;
+}
+
+.categories-mobile-modal.categories-mobile-modal-active {
+  transform: translate(0, 0) scale(1);
+}
+
+.categories-mobile-modal-close {
+  font-size: 1.5rem;
+  /* background-color: azure; */
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  position: relative;
+}
+
+.categories-mobile-modal-close::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%) rotate(45deg);
+  background-color: black;
+}
+
+.categories-mobile-modal-close::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+  background-color: black;
+}
+
+.categories-mobile-modal-list {
+  list-style-type: none;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: capitalize;
+  /* background-color: lightyellow; */
+  padding: 10px;
+  padding-bottom: 25px;
+}
+
+.category-mobile-modal {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.categories-mobile-overlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 11;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  pointer-events: none;
+  transition: all 200ms ease-in-out;
+}
+
+.categories-mobile-overlay.categories-mobile-overlay-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+
+
+
+/* NEWS styles */
+
+.news {
+  width: 100%;
+  height: fit-content;
+  padding: 0 10px;
+}
+
+.novyna {
+  background-color: white;
+  border: 2px solid black;
+  height: fit-content;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.novyna-title {
+  padding: 10px;
+  width: 100%;
+}
+
+.novyna-title-text {
+  font-size: 0.9rem;
+  line-height: 1.15;
+  color: black;
+}
+
+.novyna-start {
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.novyna-start-btn {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  
+  border-left: 12px solid black;
+}
