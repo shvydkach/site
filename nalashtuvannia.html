@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Сторінка для налаштування медіа проєкту'Швидкач'">
+  <meta name="keywords" content="налаштування швидкач медіа новини">
+
+  <title>Налаштування [Швидкач]</title>
+  
+  <link rel="shortcut icon" href="./media/favicon-shvydkach.ico">
+
+  <!-- CSS: -->
+  <!-- Загальні стилі -->
+  <link rel="stylesheet" href="./styles/header.css" />
+  <!-- Спеціальні стилі -->
+  <link rel="stylesheet" href="./styles/nalashtuvannia.css" />
+  
+  <!-- JS: -->
+  <!-- Загальні скрипти -->
+  <script src="./scripts/menu.js" defer></script>
+  <!-- Спеціальні скрипти -->
+  <script src="" defer></script>
+</head>
+
+<body>
+  
+  <!-- HEADER -->
+  <header>
+    <!-- Header Part 1 -->
+    <div class="header-logo">
+      <a href="./index.html" class="header-logo-link">
+        <span class="header-logo-link-svg">
+          <svg
+            id="header-logo-link-svg-svg" 
+            viewBox="0 0 22.901109 26.458301" >
+            <g transform="translate(853.27902,-1586.1835)">
+              <path
+              id="header-logo-link-svg-path"
+              d="m -850.51869,1586.1835 a 2.7603212,2.7603212 0 0 0 -2.76033,2.7603 2.7603212,2.7603212 0 0 0 2.76033,2.7604 2.7603212,2.7603212 0 0 0 2.76033,-2.7604 2.7603212,2.7603212 0 0 0 -2.76033,-2.7603 z m 7.99597,0 -2.16871,2.1687 9.9761,9.9761 -3.90369,3.9037 2.1687,2.1687 3.9037,-3.9037 2.16871,-2.1687 -2.16871,-2.1687 z m 0,18.2172 -2.16871,2.1687 6.07241,6.0724 2.1687,-2.1687 z" />
+            </g>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <!-- Header Part 2.1 -->
+    <div class="header-btn">
+      <div class="header-burger">
+        <span></span>
+      </div>
+    </div>
+    <!-- Header Part 2.2 -->
+    <nav class="header-menu">
+      <ul class="header-list">
+        <li>
+          <a href="./index.html" class="header-link">
+            Новини
+          </a>
+        </li>
+        <li>
+          <a href="./project.html" class="header-link">
+            Проєкт
+          </a>
+        </li>
+        <li>
+          <a href="./zviazok.html" class="header-link">
+            Зв'язок
+          </a>
+        </li>
+        <li>
+          <a href="./nalashtuvannia.html" class="header-link header-link-active">
+            Налаштування
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- ОСНОВНЕ -->
+  <main>
+    <div class="settings">
+      
+      <div class="setting theme">
+        <p class="setting-title">Кольорова тема:</p>
+        <div class="setting-select setting-select-theme">
+          <span class="theme-btn theme-light active">СВІТЛА</span>
+          <span class="theme-btn theme-dark">ТЕМНА</span>
+        </div>
+      </div>
+
+      <div class="setting wpm">
+        <p class="setting-title">Швидкість, слів/хв:</p>
+        <div class="setting-select setting-select-wpm">
+          <span class="wpm-span wpm-minus-btn wpm-btn">-</span>
+          <span class="wpm-span wpm-speed">300</span>
+          <span class="wpm-span wpm-plus-btn wpm-btn">+</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

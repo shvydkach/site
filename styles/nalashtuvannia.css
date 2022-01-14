@@ -1,0 +1,107 @@
+:root {
+  font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+main {
+  position: relative;
+  min-height: 95vh;
+  height: fit-content;
+  width: 100vw;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.settings {
+  min-height: 300px;
+  height: inherit;
+  width: 100%;
+  padding: 80px 15px;
+  display: flex;
+  flex-direction: column;  
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.setting {
+  height: 50px;
+  min-width: 330px;
+  max-width: 450px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.setting-title {
+  margin: 0 5px;
+}
+
+.setting-select {
+  width: 140px;
+  height: 30px;
+  border: 2px solid black;
+}
+
+.setting-select-theme {
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: flex;
+}
+
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.theme-btn.active {
+  background-color: black;
+  color: white;
+}
+
+.setting-select-wpm {
+  font-size: 0.85rem;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  display: flex;
+}
+
+.wpm-span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.wpm-minus-btn, 
+.wpm-plus-btn {
+  height: 100%;
+  width: 30%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.wpm-speed {
+  height: 100%;
+  width: 40%;
+}
