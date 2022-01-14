@@ -22,7 +22,8 @@
   <!-- Загальні скрипти -->
   <script src="./scripts/menu.js" defer></script>
   <!-- Спеціальні скрипти -->
-  <script src="" defer></script>
+  <script src="./scripts/setting-theme.js" defer></script>
+  <!-- <script src="" defer></script> -->
 </head>
 
 <body>
@@ -85,17 +86,19 @@
       <div class="setting theme">
         <p class="setting-title">Кольорова тема:</p>
         <div class="setting-select setting-select-theme">
-          <span class="theme-btn theme-light active">СВІТЛА</span>
+          <span class="theme-btn theme-light">СВІТЛА</span>
           <span class="theme-btn theme-dark">ТЕМНА</span>
+          <audio src="./media/audio-on.mp3" class="theme-audio-on"></audio>
+          <audio src="./media/audio-off.mp3" class="theme-audio-off"></audio>
         </div>
       </div>
 
       <div class="setting wpm">
         <p class="setting-title">Швидкість, слів/хв:</p>
         <div class="setting-select setting-select-wpm">
-          <span class="wpm-span wpm-minus-btn wpm-btn">-</span>
+          <span class="wpm-span wpm-minus-btn">-</span>
           <span class="wpm-span wpm-speed">300</span>
-          <span class="wpm-span wpm-plus-btn wpm-btn">+</span>
+          <span class="wpm-span wpm-plus-btn">+</span>
         </div>
       </div>
 

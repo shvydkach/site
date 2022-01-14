@@ -1,5 +1,34 @@
 :root {
+  /* Змінні кольорів */
+  --white: white;
+  --black: black;
+
+  /* Кореневий розмір шрифту */
   font-size: 20px;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --white: white;
+    --black: black;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: black;
+    --black: white;
+  }
+}
+
+[color-scheme="light"] {
+  --white: white;
+  --black: black;
+}
+
+[color-scheme="dark"] {
+  --white: black;
+  --black: white;
 }
 
 * {
@@ -11,6 +40,8 @@
 body {
   font-size: 1rem;
   font-family: sans-serif;
+  background-color: var(--white);
+  color: var(--black);
 }
 
 main {
@@ -50,9 +81,9 @@ main {
 .link-a:visited,
 .link-a:active,
 .link-a:focus {
-  color: black;
+  color: var(--black);
   text-decoration: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--black);
   padding-bottom: 2px;
   padding-left: 3px;
   padding-right: 3px;
