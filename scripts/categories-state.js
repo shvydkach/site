@@ -35,6 +35,12 @@ localStorage.getItem("category-additional")
 // Як завантажеться головна сторінка, встановити відповідний текст до "третьої головної"
 ctgrChangeablePlaceMobile.innerHTML = localStorage.getItem("category-additional")
 
+// Якщо при завантаженні сторінки, збереженою активною категорією не є ані "Україна", ані "Світ"
+if (localStorage.getItem("category-active") != "Україна" && localStorage.getItem("category-active") != "Світ") {
+  ctgrChangeablePlaceMobile.classList.add("category-mobile-selected")
+  ctgrChangeablePlaceMobile.innerHTML = localStorage.getItem("category-active")
+}
+
 // Як завантажеться головна сторінка, встановити відповідний стиль до головної (комп)
 categoriesComp.forEach(categoryComp => {
   if (categoryComp.innerHTML == localStorage.getItem("category-active")) {

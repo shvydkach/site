@@ -28,6 +28,7 @@
   <!-- Спеціальні скрипти -->
   <script src="./scripts/categories-modal.js" defer></script>
   <script src="./scripts/categories-state.js" defer></script>
+  <script src="./scripts/fetcher.js" type="module" defer></script>
 </head>
 
 <body>
@@ -88,9 +89,9 @@
     <div class="categories">
       <div class="categories-mobile">
         <div class="categories-mobile-main">
-          <span class="category-mobile category-mobile-main category-mobile-ukraine">Україна</span>
-          <span class="category-mobile category-mobile-main category-mobile-world">Світ</span>
-          <span class="category-mobile-main category-mobile-main-changeable">Різне</span>
+          <span class="category category-mobile category-mobile-main category-mobile-ukraine">Україна</span>
+          <span class="category category-mobile category-mobile-main category-mobile-world">Світ</span>
+          <span class="category category-mobile-main category-mobile-main-changeable">Різне</span>
         </div>
         <div class="categories-mobile-modal-btn">
           <span>Усе</span>
@@ -98,32 +99,33 @@
         <div class="categories-mobile-modal">
           <span class="categories-mobile-modal-close"></span>
           <ul class="categories-mobile-modal-list">
-            <li class="category-mobile category-mobile-modal category-mobile-cabinet">Уряд</li>
-            <li class="category-mobile category-mobile-modal category-mobile-sport">Спорт</li>
-            <li class="category-mobile category-mobile-modal category-mobile-economics">Економіка</li>
-            <li class="category-mobile category-mobile-modal category-mobile-science">Наука</li>
-            <li class="category-mobile category-mobile-modal category-mobile-culture">Культура</li>
-            <li class="category-mobile category-mobile-modal category-mobile-all">Різне</li>
+            <li class="category category-mobile category-mobile-modal category-mobile-cabinet">Уряд</li>
+            <li class="category category-mobile category-mobile-modal category-mobile-sport">Спорт</li>
+            <li class="category category-mobile category-mobile-modal category-mobile-economics">Економіка</li>
+            <li class="category category-mobile category-mobile-modal category-mobile-science">Наука</li>
+            <li class="category category-mobile category-mobile-modal category-mobile-culture">Культура</li>
+            <li class="category category-mobile category-mobile-modal category-mobile-all">Різне</li>
           </ul>
         </div>
         <div class="categories-mobile-overlay"></div>
       </div>
       <div class="categories-comp">
         <ul class="categories-comp-list">
-          <li class="category-comp">Україна</li>
-          <li class="category-comp ">Світ</li>
-          <li class="category-comp ">Уряд</li>
-          <li class="category-comp ">Спорт</li>
-          <li class="category-comp ">Економіка</li>
-          <li class="category-comp ">Наука</li>
-          <li class="category-comp ">Культура</li>
-          <li class="category-comp ">Різне</li>
+          <li class="category category-comp">Україна</li>
+          <li class="category category-comp ">Світ</li>
+          <li class="category category-comp ">Уряд</li>
+          <li class="category category-comp ">Спорт</li>
+          <li class="category category-comp ">Економіка</li>
+          <li class="category category-comp ">Наука</li>
+          <li class="category category-comp ">Культура</li>
+          <li class="category category-comp ">Різне</li>
         </ul>
       </div>
     </div>
     <div class="news">
 
-      <div class="novyna">
+      <!-- Схема: -->
+      <!-- <div class="novyna">
         <div class="novyna-title">
           <p class="novyna-title-text">
             Вітер, сніг та температура близько нуля: прогноз погоди на грудень
@@ -132,31 +134,7 @@
         <div class="novyna-start">
           <span class="novyna-start-btn"></span>
         </div>
-      </div>
-
-      <div class="novyna">
-        <div class="novyna-title">
-          <p class="novyna-title-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, officiis.
-          </p>
-        </div>
-        <div class="novyna-start">
-          <span class="novyna-start-btn"></span>
-        </div>
-      </div>
-
-      <div class="novyna">
-        <div class="novyna-title">
-          <p class="novyna-title-text">
-            Lorem ipsum dolor sit amet.
-          </p>
-        </div>
-        <div class="novyna-start">
-          <span class="novyna-start-btn"></span>
-        </div>
-      </div>
-
-
+      </div> -->
 
     </div>
   </main>
