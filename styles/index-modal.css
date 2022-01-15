@@ -1,0 +1,135 @@
+:root {
+  /* Змінні кольорів */
+  --white: white;
+  --black: black;
+
+  /* Кореневий розмір шрифту */
+  font-size: 20px;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --white: white;
+    --black: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: black;
+    --black: white;
+  }
+}
+
+[color-scheme="light"] {
+  --white: white;
+  --black: black;
+}
+
+[color-scheme="dark"] {
+  --white: black;
+  --black: white;
+}
+
+/* MOBILE CATEGORIES MODAL styles */
+
+.categories-mobile-modal {
+  background-color: var(--white);
+  border: 3px solid var(--black);
+  color: var(--black);
+  position: fixed;
+  top: 60px;
+  right: 25px;
+  width: 200px;
+  min-height: 300px;
+  height: fit-content;
+  padding-top: 45px;
+  z-index: 12;
+  transform: translate(70px, -140px) scale(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.categories-mobile-modal.categories-mobile-modal-active {
+  transform: translate(0, 0) scale(1);
+  transition: all 0.2s ease-in-out;
+}
+
+.categories-mobile-modal-close {
+  background-color: var(--white);
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+.categories-mobile-modal-close::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%) rotate(45deg);
+  background-color: var(--black);
+}
+
+.categories-mobile-modal-close::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+  background-color: var(--black);
+}
+
+.categories-mobile-modal-list {
+  list-style-type: none;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: capitalize;
+  height: auto;
+  min-height: 250px;
+  width: 100%;
+  padding: 5px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.category-mobile-modal {
+  margin-top: 15px;
+  margin-left: 15px;
+  width: fit-content;
+  padding: 5px;
+}
+
+.categories-mobile-overlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 11;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.categories-mobile-overlay.categories-mobile-overlay-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
