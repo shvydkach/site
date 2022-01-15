@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Відомий спортсмен lorem ipsum dolor sit amet consectetur.",
+    "content": "Тестова новина 1. Категорія Спорт. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Спорт",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  },
+  {
+    "title": "Хокейна ліга lorem ipsum dolor consectetur.",
+    "content": "Тестова новина 2. Категорія Спорт. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Спорт",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  },
+  {
+    "title": "Футболіст, якого lorem ipsum dolor sit amet.",
+    "content": "Тестова новина 3. Категорія Спорт. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Спорт",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  }
+]

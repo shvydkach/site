@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Науковці lorem ipsum dolor sit.",
+    "content": "Тестова новина 1. Категорія Наука. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Наука",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  },
+  {
+    "title": "Вчені з університету lorem ipsum dolor sit amet consectetur.",
+    "content": "Тестова новина 2. Категорія Наука. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Наука",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  },
+  {
+    "title": "Стало відомо, як саме lorem ipsum dolor sit consectetur.",
+    "content": "Тестова новина 3. Категорія Наука. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Наука",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  }
+]

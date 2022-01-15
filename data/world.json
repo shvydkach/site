@@ -1,0 +1,41 @@
+[
+  {
+    "title": "У світі lorem ipsum dolor sit amet consectetur.",
+    "content": "Тестова новина 1. Категорія Світ. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Світ",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  },
+  {
+    "title": "Азія нещодавно lorem ipsum dolor sit amet.",
+    "content": "Тестова новина 2. Категорія Світ. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Світ",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  },
+  {
+    "title": "У Франції lorem ipsum dolor sit amet.",
+    "content": "Тестова новина 3. Категорія Світ. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Світ",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  }
+]

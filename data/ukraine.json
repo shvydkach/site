@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Вітер, сніг та температура близько нуля: прогноз погоди на грудень",
+    "content": "Із північними вітрами надходитиме холодне повітря з північних широт. [16 - 17] грудня погоду формуватиме північно-атлантичний циклон. Він супроводжу--ватиметься шквальним вітром швидкістю [15 - 20] метрів на секунду з угорсько-польсько-словацького напрямку та мокрим снігом. Температура впродовж доби становитиме [від -3] [ до +2] градусів.",
+    "category": "Україна",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  },
+  {
+    "title": "В Україні lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "content": "Тестова новина 2. Категорія Україна. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Україна",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  },
+  {
+    "title": "На Черкащиі lorem ipsum dolor sit amet consectetur.",
+    "content": "Тестова новина 3. Категорія Україна. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Україна",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  }
+]

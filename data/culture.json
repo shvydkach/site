@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Новини культури: lorem ipsum dolor sit amet consectetur.",
+    "content": "Тестова новина 1. Категорія Світ. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Культура",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  },
+  {
+    "title": "Відомий скульптор lorem ipsum dolor sit amet.",
+    "content": "Тестова новина 2. Категорія Культура. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Культура",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  },
+  {
+    "title": "Виставка мистецтв lorem ipsum dolor.",
+    "content": "Тестова новина 3. Категорія Культура. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Культура",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  }
+]
