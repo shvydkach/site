@@ -132,7 +132,8 @@ main {
 .news {
   width: 100%;
   height: fit-content;
-  padding: 0 10px;
+  /* Важливо, врегулювання відступів збоку для мобільних */
+  padding: 0 12px;
 }
 
 .novyna {
@@ -159,9 +160,10 @@ main {
 }
 
 .novyna-start {
-  width: 60px;
-  min-width: 60px;
-  max-width: 60px;
+  /* Важливо, ширина для кнопки старту прочитання (трикутник) */
+  width: 55px;
+  min-width: 55px;
+  max-width: 55px;
   height: auto;
   display: inline-flex;
   align-items: center;
