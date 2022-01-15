@@ -1,0 +1,58 @@
+:root {
+  /* Змінні кольорів */
+  --white: white;
+  --black: black;
+
+  /* Кореневий розмір шрифту */
+  font-size: 20px;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --white: white;
+    --black: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: black;
+    --black: white;
+  }
+}
+
+[color-scheme="light"] {
+  --white: white;
+  --black: black;
+}
+
+[color-scheme="dark"] {
+  --white: black;
+  --black: white;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1rem;
+  font-family: sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+main {
+  position: relative;
+  min-height: 450px;
+  height: 90vh;
+  width: 100vw;
+  padding: 160px 40px;
+}
+
+.test {
+  margin-top: 15px;
+}
