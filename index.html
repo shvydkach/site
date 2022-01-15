@@ -17,7 +17,9 @@
   <link rel="stylesheet" href="./styles/header.css" />
   <!-- Спеціальні стилі -->
   <link rel="stylesheet" href="./styles/index.css" />
+  <link rel="stylesheet" href="./styles/index-novyna.css" />
   <link rel="stylesheet" href="./styles/index-modal.css" />
+  <link rel="stylesheet" href="./styles/index-categories.css" />
   
   <!-- JS: -->
   <!-- Загальні скрипти -->
@@ -25,6 +27,7 @@
   <script src="./scripts/theme.js" defer></script>
   <!-- Спеціальні скрипти -->
   <script src="./scripts/categories-modal.js" defer></script>
+  <script src="./scripts/categories-state.js" defer></script>
 </head>
 
 <body>
@@ -85,8 +88,8 @@
     <div class="categories">
       <div class="categories-mobile">
         <div class="categories-mobile-main">
-          <span class="category-mobile-main category-mobile-main-selected">Україна</span>
-          <span class="category-mobile-main">Світ</span>
+          <span class="category-mobile-main category-mobile-ukraine">Україна</span>
+          <span class="category-mobile-main category-mobile-world">Світ</span>
           <span class="category-mobile-main category-mobile-main-changeable">Різне</span>
         </div>
         <div class="categories-mobile-modal-btn">
@@ -95,17 +98,28 @@
         <div class="categories-mobile-modal">
           <span class="categories-mobile-modal-close"></span>
           <ul class="categories-mobile-modal-list">
-            <li class="category-mobile-modal">Уряд</li>
-            <li class="category-mobile-modal">Спорт</li>
-            <li class="category-mobile-modal">Економіка</li>
-            <li class="category-mobile-modal">Наука</li>
-            <li class="category-mobile-modal">Культура</li>
-            <li class="category-mobile-modal">Різне</li>
+            <li class="category-mobile-modal category-mobile-cabinet">Уряд</li>
+            <li class="category-mobile-modal category-mobile-sport">Спорт</li>
+            <li class="category-mobile-modal category-mobile-economics">Економіка</li>
+            <li class="category-mobile-modal category-mobile-science">Наука</li>
+            <li class="category-mobile-modal category-mobile-culture">Культура</li>
+            <li class="category-mobile-modal category-mobile-all">Різне</li>
           </ul>
         </div>
         <div class="categories-mobile-overlay"></div>
       </div>
-      <!-- <div class="categories-desktop"></div> -->
+      <div class="categories-comp">
+        <ul class="categories-comp-list">
+          <li class="category-comp category-comp-selected ">Україна</li>
+          <li class="category-comp ">Світ</li>
+          <li class="category-comp ">Уряд</li>
+          <li class="category-comp ">Спорт</li>
+          <li class="category-comp ">Економіка</li>
+          <li class="category-comp ">Наука</li>
+          <li class="category-comp ">Культура</li>
+          <li class="category-comp ">Різне</li>
+        </ul>
+      </div>
     </div>
     <div class="news">
 
@@ -142,16 +156,7 @@
         </div>
       </div>
 
-      <div class="novyna">
-        <div class="novyna-title">
-          <p class="novyna-title-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing.
-          </p>
-        </div>
-        <div class="novyna-start">
-          <span class="novyna-start-btn"></span>
-        </div>
-      </div>
+
 
     </div>
   </main>

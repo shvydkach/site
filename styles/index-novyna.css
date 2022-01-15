@@ -1,0 +1,84 @@
+:root {
+  /* Змінні кольорів */
+  --white: white;
+  --black: black;
+
+  /* Кореневий розмір шрифту */
+  font-size: 20px;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --white: white;
+    --black: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: black;
+    --black: white;
+  }
+}
+
+[color-scheme="light"] {
+  --white: white;
+  --black: black;
+}
+
+[color-scheme="dark"] {
+  --white: black;
+  --black: white;
+}
+
+.novyna {
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  height: fit-content;
+  width: 100%;
+  max-width: 768px;
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.novyna-title {
+  padding: 10px;
+  width: 100%;
+}
+
+.novyna-title-text {
+  font-size: 0.9rem;
+  line-height: 1.15;
+  color: var(--black);
+}
+
+.novyna-start {
+  width: 55px;  /* <- Важливо: ширина для кнопки старту прочитання (трикутник) */
+  min-width: 55px;
+  max-width: 55px;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.novyna-start-btn {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  
+  border-left: 12px solid var(--black);
+}
+
+@media (min-width: 770px) {
+  .novyna {
+    width: 85%;
+    max-width: 750px;
+    margin-top: 23px;
+  }
+}
