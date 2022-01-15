@@ -16,15 +16,9 @@ const categories = [
   "Різне", // поєднання усіх
 ]
 
-const ctgrUkraineMobile = document.querySelector(".category-mobile-ukraine")
-const ctgrWorldMobile = document.querySelector(".category-mobile-world")
-const ctgrCabinetMobile = document.querySelector(".category-mobile-cabinet")
-const ctgrSportMobile = document.querySelector(".category-mobile-sport")
-const ctgrEconomicsMobile = document.querySelector(".category-mobile-economics")
-const ctgrScienceMobile = document.querySelector(".category-mobile-science")
-const ctgrCultureMobile = document.querySelector(".category-mobile-culture")
-const ctgrAllMobile = document.querySelector(".category-mobile-all")
 
+const categoriesComp = document.querySelectorAll(".category-comp")
+const categoriesMobile = document.querySelectorAll(".category-mobile")
 const ctgrChangeablePlaceMobile = document.querySelector(".category-mobile-main-changeable")
 
 
@@ -35,27 +29,111 @@ localStorage.getItem("category-active")
   
 // Якщо немає збереженої category-additional, то створити її і встановити "Різне" (типова)
 localStorage.getItem("category-additional")
-  ? null
-  : localStorage.setItem("category-additional", "Різне")
+? null
+: localStorage.setItem("category-additional", "Різне")
 
-// Як завантажується головна сторінка, встановити відповідний текст до "третьої головної"
+// Як завантажеться головна сторінка, встановити відповідний текст до "третьої головної"
 ctgrChangeablePlaceMobile.innerHTML = localStorage.getItem("category-additional")
 
-// Як завантажується головна сторінка, встановити відповідний стиль до головної
-switch (localStorage.getItem("category-active")) {
-  case "Україна":
-    ctgrUkraineMobile.classList.add("category-mobile-main-selected")
-    break;
-  case "Світ":
-    ctgrWorldMobile.classList.add("category-mobile-main-selected")
-    break;
-  default:
-    ctgrChangeablePlaceMobile.classList.add("category-mobile-main-selected")
-    break;
+// Як завантажеться головна сторінка, встановити відповідний стиль до головної (комп)
+categoriesComp.forEach(categoryComp => {
+  if (categoryComp.innerHTML == localStorage.getItem("category-active")) {
+    categoryComp.classList.add("category-comp-selected")
+    otherClearSelectedClassComp(categoryComp.innerHTML)
+  }
+})
+
+// Як завантажеться головна сторінка, встановити відповідний стиль до головної (мобільні)
+categoriesMobile.forEach(categoryMobile => {
+  if (categoryMobile.innerHTML == localStorage.getItem("category-active")) {
+    categoryMobile.classList.add("category-mobile-selected")
+    otherClearSelectedClassMobile(categoryMobile.innerHTML)
+  }
+})
+
+// Коли натискається (вибирається) якась категорія на комп
+categoriesComp.forEach(categoryComp => {
+  categoryComp.addEventListener("click", () => {
+    localStorage.setItem("category-active", categoryComp.innerHTML)
+    categoryComp.classList.add("category-comp-selected")
+    otherClearSelectedClassMobile(categoryComp.innerHTML)
+    otherClearSelectedClassComp(categoryComp.innerHTML)
+  })
+})
+
+// Коли натискається (вибирається) якась категорія на мобільному
+categoriesMobile.forEach(categoryMobile => {
+  categoryMobile.addEventListener("click", () => {
+    localStorage.setItem("category-active", categoryMobile.innerHTML)
+    categoryMobile.classList.add("category-mobile-selected")
+    otherClearSelectedClassMobile(categoryMobile.innerHTML)
+    otherClearSelectedClassComp(categoryMobile.innerHTML)
+    // ctgrChangeablePlaceMobile не належить до categoriesMobile
+    ctgrChangeablePlaceMobile.classList.remove("category-mobile-selected")
+    
+    // Якщо це натиснуто (вибрано) категорію з віконечка-modal
+    if (categoryMobile.classList.contains("category-mobile-modal")) {
+      // Зачинити це віконечко-modal (фактично прибрати класи)
+      document.querySelector(".categories-mobile-modal").classList.remove("categories-mobile-modal-active")
+      document.querySelector(".categories-mobile-overlay").classList.remove("categories-mobile-overlay-active")
+      // Встановити збережене відповідно до вибраної категорії
+      localStorage.setItem("category-additional", categoryMobile.innerHTML)
+      // Покласти відповідну назву в "третє" місце
+      ctgrChangeablePlaceMobile.innerHTML = localStorage.getItem("category-additional")
+      // Додати відповідний стиль до "третього" місця
+      ctgrChangeablePlaceMobile.classList.add("category-mobile-selected")
+    }
+  })
+})
+
+
+// Коли натискається (вибирається) "третя" категорія з головних на мобільному 
+ctgrChangeablePlaceMobile.addEventListener("click", () => {
+  localStorage.setItem("category-active", ctgrChangeablePlaceMobile.innerHTML)
+  ctgrChangeablePlaceMobile.classList.add("category-mobile-selected")
+  otherClearSelectedClassMobile(ctgrChangeablePlaceMobile.innerHTML)
+  otherClearSelectedClassComp(ctgrChangeablePlaceMobile.innerHTML)
+  // categoriesMobile.forEach(categoryMobile => {
+  //   if (categoriesMobile.innerHTML == localStorage.getItem("category-active"))
+  // })
+})
+
+// Якщо "третя" категорія є активною, то відповідно підсвітити її 
+if (ctgrChangeablePlaceMobile.innerHTML == localStorage.getItem("category-active")) {
+  document.querySelector(".category-mobile-ukraine").classList.remove("category-mobile-selected")
+  document.querySelector(".category-mobile-world").classList.remove("category-mobile-selected")
+  ctgrChangeablePlaceMobile.classList.add("category-mobile-selected")
+  otherClearSelectedClassMobile(ctgrChangeablePlaceMobile.innerHTML)
 }
 
-// Покращити
-// 
-ctgrUkraineMobile.addEventListener("click", () => {
-  localStorage.setItem("")
-})
+
+
+/* Допоміжні функції: */
+
+function otherClearSelectedClassComp(exceptInnerHTML) {
+  const categoriesCompArr = Array.from(categoriesComp)
+  
+  const filteredCategoriesComp = categoriesCompArr.filter(categoryComp => {
+    return categoryComp.innerHTML != exceptInnerHTML
+  })
+
+  filteredCategoriesComp.forEach(notSelectedCategory => {
+    notSelectedCategory.classList.remove("category-comp-selected")
+  })
+}
+
+function otherClearSelectedClassMobile(exceptInnerHTML) {
+  const categoriesMobileArr = Array.from(categoriesMobile)
+  
+  const filteredCategoriesComp = categoriesMobileArr.filter(categoryMobile => {
+    return categoryMobile.innerHTML != exceptInnerHTML
+  })
+
+  filteredCategoriesComp.forEach(notSelectedCategory => {
+    notSelectedCategory.classList.remove("category-mobile-selected")
+  })
+}
+
+
+
+
