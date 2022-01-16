@@ -1,7 +1,7 @@
 
 
 // Елемент reader завжди є на сторінці (у розмітці)
-// Тому, він не залежить від асинхронності fetcher
+// Тому, він не залежить від асинхронності fetcher.js
 
 const reader = document.querySelector(".reader")
 const bodyEl = document.querySelector("body")

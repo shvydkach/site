@@ -144,53 +144,54 @@ function loadContent(data) {
   // Отримання всіх кнопок "Старт прочитання" (трикутник)
   const startBtns = document.querySelectorAll(".novyna-start")
 
-
   // Коли натискається кнопка "Старт прочитання" (трикутник)
   startBtns.forEach(startBtn => {
     startBtn.addEventListener("click", () => {
+      openReader()
       startReader(startBtn)
     })
   })
-  
 }
 
-
-
-
-// start.addEventListener("click", () => {
-//   updateSpeed()
-//   let inputText = splitBySpaces(inputBlock.value)
-//   let words = forComp(inputText)
-
-//   if (canStartAgain) {
-//     showing(words)  
-//   }
-// })
-
-
+// Запускає "Прочитувач"
 function startReader(clickedBtn) {
+  // clickedBtn кнопка "Старт прочитання" (трикутник)
+
   //  Div, до якого належить ця кнопка. Він зберігає дані через dataset
   const novynaEl = clickedBtn.parentElement
   
-  // Дані (текст, посилання, потім - медіа), отримані з div
+  // Дані (текст, посилання) отримані з div
+  // ПОТІМ: отримання медіа, так само
   const content = novynaEl.dataset.content
   const links = novynaEl.dataset.links
-
-  openReader()
   
-  // console.log(reader)
+  const wordsSplitted = splitBySpaces(content)
+  const wordsToRead = forComp(wordsSplitted)
+  const wordsForTransliteration = forUser(wordsSplitted)
+  
+  showing(wordsToRead) 
+
+  // ДОДАТИ потім: керування станами
+  // if (canStartAgain) {
+  //   showing(words)  
+  // }
 }
+
+// Елемент в який 'щосекунди' буде вставлятись слово
+const wordOutput = document.querySelector(".reader-text-output-word")
 
 
 
 function showing(input) {
+  // input - масив з розподілених слів, отриманих за допомогою forComp
+
   let counter = -1
 
   if (input.length > 0) {
     const interval = setInterval(() => {
       if (counter !== input.length - 1) {
           counter++   
-          canStartAgain = false
+          // canStartAgain = false
 
           // Слово, що має прочитуватись
           let currentWord = input[counter]
@@ -226,16 +227,14 @@ function showing(input) {
           // якщо слово задовге, то focusOn буде undefined, і це виконається
           else {
             clearInterval(interval)
-            wordOutput.innerHTML = `
-              <span class="err">Довжина до 15 букв!</span>
-            `
+            console.log("Помилка! Задовге слово")
           }
       } 
       else {
         clearInterval(interval)
-        canStartAgain = true
+        // canStartAgain = true
       }
-    }, speed)
+    }, getWpm())
   } 
   else {
     output.innerHTML = "Немає вхідних даних"
