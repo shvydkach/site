@@ -49,6 +49,10 @@ body.locked-for-reading {
 }
 
 .reader {
+  display: none;
+}
+
+.reader.reader-active {
   background-color: var(--white);
   width: 100vw;
   height: 100vh;
@@ -70,7 +74,6 @@ body.locked-for-reading {
 
 .reader-close-btn {
   background-color: var(--white);
-  font-size: 1.5rem;
   width: 55px;
   height: 55px;
   display: inline-block;
@@ -104,14 +107,13 @@ body.locked-for-reading {
 }
 
 .reader-text {
-  background-color: lightgreen;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .reader-text-container {
-  border: 1px solid orange;
+  border: 1px solid orange; /* <-- Тестове */
   background-color: var(--white);
   width: 85%;
   max-width: 350px;

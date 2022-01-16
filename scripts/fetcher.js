@@ -6,6 +6,15 @@ import getDataEconomics from "./fetch-economics.js"
 import getDataScience from "./fetch-science.js"
 import getDataCulture from "./fetch-culture.js"
 
+import { getWpm } from "./reader-reading.js"
+import { focusIndex } from "./reader-reading.js"
+import { splitBySpaces } from "./reader-reading.js"
+import { forComp } from "./reader-reading.js"
+import { forUser } from "./reader-reading.js"
+
+import { openReader } from "./reader.js"
+import { closeReader } from "./reader.js"
+
 
 
 const newsContainer = document.querySelector(".news")
@@ -135,6 +144,7 @@ function loadContent(data) {
   // Отримання всіх кнопок "Старт прочитання" (трикутник)
   const startBtns = document.querySelectorAll(".novyna-start")
 
+
   // Коли натискається кнопка "Старт прочитання" (трикутник)
   startBtns.forEach(startBtn => {
     startBtn.addEventListener("click", () => {
@@ -147,20 +157,6 @@ function loadContent(data) {
 
 
 
-
-function startReader(clickedBtn) {
-  //  Div, до якого належить ця кнопка. Він зберігає дані через dataset
-  const novynaEl = clickedBtn.parentElement
-  
-  // Дані (текст, посилання, потім - медіа), отримані з div
-  const content = novynaEl.dataset.content
-  const links = novynaEl.dataset.links
-  
-  // reader.classList.add("active")
-  // localStorage.setItem("reader-opened", true)
-  
-}
-
 // start.addEventListener("click", () => {
 //   updateSpeed()
 //   let inputText = splitBySpaces(inputBlock.value)
@@ -172,7 +168,79 @@ function startReader(clickedBtn) {
 // })
 
 
+function startReader(clickedBtn) {
+  //  Div, до якого належить ця кнопка. Він зберігає дані через dataset
+  const novynaEl = clickedBtn.parentElement
+  
+  // Дані (текст, посилання, потім - медіа), отримані з div
+  const content = novynaEl.dataset.content
+  const links = novynaEl.dataset.links
 
+  openReader()
+  
+  // console.log(reader)
+}
+
+
+
+function showing(input) {
+  let counter = -1
+
+  if (input.length > 0) {
+    const interval = setInterval(() => {
+      if (counter !== input.length - 1) {
+          counter++   
+          canStartAgain = false
+
+          // Слово, що має прочитуватись
+          let currentWord = input[counter]
+
+          // Індекс тої букви, яка має виділятись при сфокусованому режимі прочитання
+          let focusOn = focusIndex(currentWord)
+          
+          if (focusOn !== undefined) {
+            let firstLetters = currentWord.substring(0, focusOn) 
+            let focusLetter = currentWord.substring(focusOn, focusOn + 1)
+            let lastLetters = currentWord.substring(focusOn + 1, currentWord.length)
+
+            // Заміна всіх пробілів на спецсимвол &nbsp;
+            // Це для того, щоб не було переносу на інший рядок
+            // Наприклад: 
+            // редакторський текст: "[16 - 17] грудня"
+            // Функція splitBySpaces повертає з цього масив: ["[16", "-", "17]", "грудня"]
+            // Функція forComp повертає з цього масив: ["16 - 17", "грудня"]
+            // Нижчезастосований replaceAll замінює пробіли на &nbsp;
+            // Так, що "16 - 17" перетворюється на "16&nbsp;-&nbsp;17" , яке й вставляється в HTML
+            firstLetters = firstLetters.replaceAll(" ", "&nbsp;")
+            focusLetter = focusLetter.replaceAll(" ", "&nbsp;")
+            lastLetters = lastLetters.replaceAll(" ", "&nbsp;")
+
+            wordOutput.innerHTML = `
+            <span class="focused">
+              <span class="letter letter1">${firstLetters}</span>
+              ${focusLetter}
+              <span class="letter letter2">${lastLetters}</span>
+            </span>
+          `
+          }
+          // якщо слово задовге, то focusOn буде undefined, і це виконається
+          else {
+            clearInterval(interval)
+            wordOutput.innerHTML = `
+              <span class="err">Довжина до 15 букв!</span>
+            `
+          }
+      } 
+      else {
+        clearInterval(interval)
+        canStartAgain = true
+      }
+    }, speed)
+  } 
+  else {
+    output.innerHTML = "Немає вхідних даних"
+  }
+}
 
 
 
