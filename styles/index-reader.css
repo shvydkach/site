@@ -1,0 +1,203 @@
+:root {
+  /* Змінні кольорів */
+  --white: white;
+  --black: black;
+
+  /* Змінна кольору букви, на якій фокусується */
+  --focus-letter-color: orangered;
+
+  /* Кореневий розмір шрифту */
+  font-size: 20px;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --white: white;
+    --black: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: black;
+    --black: white;
+  }
+}
+
+[color-scheme="light"] {
+  --white: white;
+  --black: black;
+}
+
+[color-scheme="dark"] {
+  --white: black;
+  --black: white;
+}
+
+body.locked-for-reading {
+  overflow: hidden;
+}
+
+.locked-for-reading {
+  overflow: hidden;
+}
+
+.reader {
+  background-color: var(--white);
+  width: 100vw;
+  height: 100vh;
+  z-index: 14;
+  opacity: 1;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  display: grid;
+  grid-template-rows: 150px 1fr 150px;
+}
+
+.reader-close {
+  padding: 5px;
+  position: relative;
+}
+
+.reader-close-btn {
+  background-color: var(--white);
+  font-size: 1.5rem;
+  width: 55px;
+  height: 55px;
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.reader-close-btn::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%) rotate(45deg);
+  background-color: var(--black);
+}
+
+.reader-close-btn::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+  background-color: var(--black);
+}
+
+.reader-text {
+  /* background-color: lightgreen; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reader-text-container {
+  border: 1px solid orange;
+  background-color: var(--white);
+  width: 85%;
+  max-width: 350px;
+  min-width: 280px;
+  height: 85%;
+  max-height: 350px;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reader-text-output {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reader-text-output-word {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.focused {
+  display: inline-block;
+  position: relative;
+  left: 45%; /* Зміна відступу тут*/
+  width: auto;
+  font-size: 1.5rem;
+  color: var(--focus-letter-color);
+}
+
+.letter {
+  display: inline-block;
+  position: absolute;
+  color: var(--black);
+}
+
+.letter1 {
+  padding-right: 1px;
+  transform: translate(-100%, 0%);
+}
+
+.letter2 {
+  padding-left: 1px;
+}
+
+.reader-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reader-actions-btns {
+  background-color: var(--white);
+  height: 55px;
+  width: 70%;
+  min-width: 180px;
+  max-width: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reader-action-btn {
+  display: inline-block;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.reader-action-btn svg {
+  height: 27px;
+}
+
+.svg-path {
+  fill: var(--black); 
+  stroke: none;
+}
+
+@media (min-width: 770px) {
+  
+}
+
+
+
+
+
+

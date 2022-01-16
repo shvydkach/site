@@ -59,6 +59,7 @@
   width: 55px;  /* <- Важливо: ширина для кнопки старту прочитання (трикутник) */
   min-width: 55px;
   max-width: 55px;
+  padding: 5px 0;
   height: auto;
   display: inline-flex;
   align-items: center;

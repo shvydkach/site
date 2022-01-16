@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="./styles/index-novyna.css" />
   <link rel="stylesheet" href="./styles/index-modal.css" />
   <link rel="stylesheet" href="./styles/index-categories.css" />
+  <link rel="stylesheet" href="./styles/index-reader.css" />
   
   <!-- JS: -->
   <!-- Загальні скрипти -->
@@ -31,7 +32,7 @@
   <script src="./scripts/fetcher.js" type="module" defer></script>
 </head>
 
-<body>
+<body class="locked-for-reading">
   
   <!-- HEADER -->
   <header>
@@ -138,6 +139,61 @@
 
     </div>
   </main>
+
+  <!-- ПРОЧИТАННЯ -->
+  <div class="reader">
+    <div class="reader-close">
+      <span class="reader-close-btn"></span>
+    </div>
+    <div class="reader-text">
+      <div class="reader-text-container">
+        <div class="reader-text-output">
+          <span class="reader-text-output-word">
+            <span class="focused">
+              <span class="letter letter1">Швид</span>
+              к
+              <span class="letter letter2">очитач</span>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="reader-actions">
+      <div class="reader-actions-btns">
+        <span class="reader-action-btn reader-action-btn-text">
+          <svg id="svg-text" viewBox="0 0 32.788599 26.4583">
+            <g transform="translate(-3389.328,-1575.459)">
+              <path
+                id="svg-text-path"
+                class="svg-path"
+                d="m 3389.328,1575.459 v 1.3301 25.1282 h 32.7886 v -26.4583 z m 2.6603,2.6603 h 27.468 v 21.1378 h -27.468 z m 2.67,3.8978 v 2.6598 h 15.8742 v -2.6598 z m 17.4689,0 v 2.6598 h 4.7097 v -2.6598 z m -17.4689,5.3303 v 2.6701 h 4.0746 v -2.6701 z m 5.6704,0 v 2.6701 h 5.4197 v -2.6701 z m 7.0154,0 v 2.6701 h 9.4928 v -2.6701 z m -12.6858,5.3407 v 2.6706 h 8.9967 v -2.6706 z m 10.593,0 v 2.6706 h 11.5856 v -2.6706 z" />
+            </g>
+          </svg>
+        </span>
+        <span class="reader-action-btn reader-action-btn-link">
+          <svg id="svg-link" viewBox="0 0 21.2 26.5">
+            <g transform="translate(1885.6735,-1620.286)">
+              <path
+                id="svg-link-path"
+                class="svg-path"
+                d="m -1864.5187,1620.286 -1.694,0.8062 -19.4608,9.1529 5.5135,3.8731 -4.9105,6.9914 4.0235,2.8155 4.0226,2.8192 4.907,-6.9922 5.5206,3.876 1.9005,-21.3343 z m -2.6081,3.7343 -1.3749,15.5086 -4.166,-2.922 -4.9104,6.9948 -2.1749,-1.5279 -2.1679,-1.5172 4.9098,-6.9921 -4.1791,-2.9327 z" />
+            </g>
+          </svg>
+        </span>
+        <span class="reader-action-btn reader-action-btn-media">
+          <svg id="svg-media" viewBox="0 0 33.618301 26.458292">
+            <g transform="translate(-3683.6866,-1671.4726)">
+              <path
+                id="svg-media-path"
+                class="svg-path"
+                transform="matrix(2.1097939,0,0,2.1097939,-3873.5306,-1749.1217)"
+                d="m 3586.7488,1621.2931 -1.3283,2.3009 h -3.4511 l 0.012,10.2398 h 7.9453 0.018 7.9471 l 0.012,-10.2398 h -3.4511 l -1.328,-2.3009 h -3.1797 -0.016 z m 0.7634,1.3224 h 2.416 0.016 2.4157 l 1.3283,2.3006 h 2.8904 l -0.01,7.5936 h -6.6249 -0.018 -6.6229 l -0.01,-7.5936 h 2.8905 z m 2.4239,2.8047 c -1.6014,0 -2.914,1.3127 -2.914,2.9139 0,1.6013 1.3126,2.914 2.914,2.914 1.6011,-10e-5 2.9139,-1.3127 2.9139,-2.914 0,-1.6011 -1.3128,-2.9139 -2.9139,-2.9139 z m 0,1.3221 c 0.8862,1e-4 1.5898,0.7056 1.5898,1.5918 0,0.8863 -0.7036,1.5898 -1.5898,1.5899 -0.8864,0 -1.5899,-0.7035 -1.5899,-1.5899 0,-0.8862 0.7035,-1.5918 1.5899,-1.5918 z" />
+            </g>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
