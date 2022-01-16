@@ -60,6 +60,7 @@ body.locked-for-reading {
   top: 0;
   display: grid;
   grid-template-rows: 150px 1fr 150px;
+  transition: all 1s ease;
 }
 
 .reader-close {

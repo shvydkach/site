@@ -147,21 +147,37 @@ function loadContent(data) {
 
 
 
-// Допоміжні функції:
-
 
 function startReader(clickedBtn) {
   //  Div, до якого належить ця кнопка. Він зберігає дані через dataset
   const novynaEl = clickedBtn.parentElement
+  
+  // Дані (текст, посилання, потім - медіа), отримані з div
   const content = novynaEl.dataset.content
   const links = novynaEl.dataset.links
-
+  
   // reader.classList.add("active")
-  // localStorage.setItem("reading", true)
-
+  // localStorage.setItem("reader-opened", true)
+  
 }
 
+// start.addEventListener("click", () => {
+//   updateSpeed()
+//   let inputText = splitBySpaces(inputBlock.value)
+//   let words = forComp(inputText)
 
+//   if (canStartAgain) {
+//     showing(words)  
+//   }
+// })
+
+
+
+
+
+
+
+// Допоміжні функції:
 
 function createNovynaElement(novynaDataArr) {
   /*
