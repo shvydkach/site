@@ -68,8 +68,9 @@ main.blurried-for-reading {
   z-index: 14;
   opacity: 1;
   display: inline-block;
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
   display: grid;
   grid-template-rows: 150px 1fr 150px;
   transition: all 0.5s ease;
@@ -121,7 +122,6 @@ main.blurried-for-reading {
 }
 
 .reader-text-container {
-  border: 1px solid orange; /* <-- Тестове */
   background-color: var(--white);
   width: 85%;
   max-width: 350px;
