@@ -6,6 +6,11 @@
   /* Змінна кольору букви, на якій фокусується */
   --focus-letter-color: orangered;
 
+  /* Початкове значення змінної висоти */
+  /* Це значення буде змінюватись через adjust-height.js */
+  /* Це тому, що на мобільних пристроях є нижні і верхні панелі, і через них не видно кнопки */
+  --app-height: 100%;
+
   /* Кореневий розмір шрифту */
   font-size: 20px;
 }
@@ -47,6 +52,7 @@ body.locked-for-reading {
   background-color: var(--white);
   width: 100vw;
   height: 100vh;
+  height: var(--app-height);
   z-index: 14;
   opacity: 1;
   display: inline-block;
@@ -97,7 +103,7 @@ body.locked-for-reading {
 }
 
 .reader-text {
-  /* background-color: lightgreen; */
+  background-color: lightgreen;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,6 +144,7 @@ body.locked-for-reading {
   left: 45%; /* Зміна відступу тут*/
   width: auto;
   font-size: 1.5rem;
+  user-select: none;
   color: var(--focus-letter-color);
 }
 
