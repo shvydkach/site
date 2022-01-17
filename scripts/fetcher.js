@@ -151,6 +151,13 @@ function loadContent(data) {
       startReader(startBtn)
     })
   })
+
+  // Кнопка закриття "Прочитувача"
+  const readerCloseBtn = document.querySelector(".reader-close-btn")
+
+  readerCloseBtn.addEventListener("click", () => {
+    
+  })
 }
 
 // Запускає "Прочитувач"
@@ -177,10 +184,10 @@ function startReader(clickedBtn) {
   // }
 }
 
+
+
 // Елемент в який 'щосекунди' буде вставлятись слово
 const wordOutput = document.querySelector(".reader-text-output-word")
-
-
 
 function showing(input) {
   // input - масив з розподілених слів, отриманих за допомогою forComp

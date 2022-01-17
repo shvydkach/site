@@ -11,7 +11,7 @@ const readerCloseBtn = document.querySelector(".reader-close-btn")
 
 // Про всяк випадок: коли тільки завантажується головна сторінка, зачинити "Прочитувач"
 localStorage.setItem("reader-opened", false)
-closeReader()
+// closeReader()
 
 
 export function openReader() {

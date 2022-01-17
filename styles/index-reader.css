@@ -142,9 +142,109 @@ main.blurried-for-reading {
   justify-content: center;
 }
 
+.reader-text-output-endmessage {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 1.2rem;
+  width: 100%;
+  min-height: 100px;
+  height: 100%;
+  display: block; /* <- Буде змінюватись через JS */
+}
+
+.reader-text-output-endmessage-next {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Стрілочка після закінчення новини: Наступна > */
+.reader-text-output-endmessage-next span {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin-left: 1px;
+  position: relative;
+}
+
+.reader-text-output-endmessage-next span::before {
+  content: "";
+  background-color: var(--black);
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  top: 44%;
+  right: 50%;
+  transform: translate(50%, -50%) rotate(45deg);
+}
+
+.reader-text-output-endmessage-next span::after {
+  content: "";
+  background-color: var(--black);
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  top: 56%;
+  right: 50%;
+  transform: translate(50%, 50%) rotate(-45deg);
+}
+
+.reader-text-output-endmessage-prev {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding-right: 60px; /* <- Для того, щоб вирівняти з верхнім */
+  cursor: pointer;
+}
+
+/* Стрілочка після закінчення новини: < Попередня */
+.reader-text-output-endmessage-prev span {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin-right: 1px;
+  position: relative;
+}
+
+.reader-text-output-endmessage-prev span::before {
+  content: "";
+  background-color: var(--black);
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  top: 44%;
+  right: 50%;
+  transform: translate(50%, -50%) rotate(-45deg);
+}
+
+.reader-text-output-endmessage-prev span::after {
+  content: "";
+  background-color: var(--black);
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  top: 56%;
+  right: 50%;
+  transform: translate(50%, 50%) rotate(45deg);
+}
+
+
+
+
+/* Стилі для слова, що показується */
 .reader-text-output-word {
   position: relative;
-  display: inline-block;
+  display: none; /* ПРИБРАТИ !*/ /* <- Буде змінюватись через JS */
   width: 100%;
   height: auto;
 }
@@ -152,7 +252,7 @@ main.blurried-for-reading {
 .focused {
   display: inline-block;
   position: relative;
-  left: 45%; /* Зміна відступу тут*/
+  left: 45%; /* <- Зміна відступу тут*/
   width: auto;
   font-size: 1.5rem;
   user-select: none;
