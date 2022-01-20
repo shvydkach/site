@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="./styles/index-modal.css" />
   <link rel="stylesheet" href="./styles/index-categories.css" />
   <link rel="stylesheet" href="./styles/index-reader.css" />
+  <link rel="stylesheet" href="./styles/index-actions.css" />
   
   <!-- JS: -->
   <!-- Загальні скрипти -->
@@ -145,9 +146,13 @@
 
   <!-- ПРОЧИТАННЯ -->
   <div class="reader reader-active">
+
+    <!-- Секція 1. Кнопка закриття "Прочитувача" -->
     <div class="reader-close">
       <span class="reader-close-btn"></span>
     </div>
+    
+    <!-- Секція 2. Відображення тексту новини та навігації після завершення -->
     <div class="reader-text">
       <div class="reader-text-container">
         <div class="reader-text-output">
@@ -158,6 +163,7 @@
               <span class="letter letter2">очитач</span>
             </span>
           </span>
+          <!-- Навігація. Буде показуватись в кінці новини, тобто після прочитання -->
           <div class="reader-text-output-endmessage">
             <span class="reader-text-output-endmessage-next"> 
               Наступна <span class="reader-endmessage-arrow"></span> 
@@ -169,7 +175,10 @@
         </div>
       </div>
     </div>
+
+    <!-- Секція 3. Кнопки для дій (текст, посилання, медіа) -->
     <div class="reader-actions">
+      <!-- Розмітка кнопок -->
       <div class="reader-actions-btns">
         <span class="reader-action-btn reader-action-btn-text">
           <svg id="svg-text" viewBox="0 0 32.788599 26.4583">
@@ -202,6 +211,20 @@
             </g>
           </svg>
         </span>
+      </div>
+      <!-- Розмітка для дій -->
+      <div class="reader-action-overlay reader-action-active">
+        <div class="reader-action-close">
+          <span class="reader-action-close-btn"></span>
+        </div>
+        <div class="reader-action-main">
+          <div class="reader-action-container">
+            <!-- Дія: Транскрипція -->
+            <div class="reader-action-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.  similique accusamus ratione. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias quidem nihil eum fugit quam enim odit assumenda! Dolorem fugit rem unde, soluta ullam molestias suscipit labore impedit eaque inventore sed, temporibus delectus ipsum? Quas, expedita? Dolore cupiditate assumenda ducimus reiciendis facere. Accusamus, eos quibusdam saepe sit provident dolorum. Earum placeat vero consequatur nobis necessitatibus, debitis iure officia aut dolor odio porro nostrum voluptatibus ab? Ea in minus optio asperiores, incidunt unde reprehenderit est non. Ducimus temporibus nesciunt quia nostrum dignissimos? Tenetur quae a dolorum sint aut eius quia velit veniam nihil, quidem nobis vero nam, illum at natus necessitatibus expedita ex est officia facere reiciendis temporibus nesciunt obcaecati! Est eligendi totam, a vero, ipsum facere, sint minus iste dolorum odit explicabo necessitatibus repellat! Ipsum tempore nobis minima quos, eligendi deleniti quia laborum ipsam eveniet saepe reprehenderit, voluptatum tenetur nemo esse rerum id error, officia veniam nam? Assumenda modi enim odit nisi natus. Nulla quia quam laudantium in sit illum facilis neque quo atque illo? Aperiam molestias dignissimos vitae porro dolore tenetur reiciendis, ullam numquam repellat maxime facere cupiditate consectetur incidunt sit exercitationem velit quaerat beatae similique sed unde cum qui! Doloribus unde facere odit incidunt illo veritatis esse quasi! Nostrum accusantium dignissimos facilis magni aliquam odio placeat error maxime nulla amet, minus reiciendis omnis, corporis tempora repellendus quam perspiciatis distinctio nobis facere ipsa assumenda! Quibusdam tempora illum cupiditate odit inventore quae debitis? Consequuntur ipsum natus suscipit iusto? Corrupti rem officia ullam, veritatis necessitatibus fuga expedita cupiditate nesciunt tenetur, quisquam illo quas fugiat mollitia quam eius nemo voluptas laborum at repellat labore saepe! Dolore tempore error a, dignissimos, accusantium laborum harum est in itaque ipsa velit architecto alias sed minus quae repellat quam culpa officiis nobis hic voluptates quo nesciunt. Vitae hic ipsum distinctio beatae sed, ullam voluptatum quia incidunt ea. Dolore tenetur natus quam nulla dignissimos, asperiores, officia mollitia harum rem labore numquam tempora, distinctio fugit dolorem recusandae non exercitationem sed. Necessitatibus voluptas adipisci commodi quam deserunt totam laudantium repellendus recusandae obcaecati officia quod pariatur sapiente tenetur perferendis praesentium, explicabo vel aspernatur! Nobis iste repellat quis veniam dignissimos officiis, perferendis sequi culpa, quaerat veritatis odit qui deserunt impedit, voluptatem amet? Nobis fugiat ab voluptas ipsa, tempora sapiente nostrum assumenda culpa unde nesciunt aspernatur recusandae debitis eum ratione enim molestias distinctio repellendus at labore soluta iste in. Maiores quas qui sapiente ex minima laborum autem, eos aliquid vitae iusto quos recusandae magni voluptas, cum omnis quod hic eveniet eum eaque debitis veritatis nemo mollitia quibusdam at? Esse eligendi quod illo magnam ducimus recusandae at non. Eligendi at ratione magnam expedita fugit aut! Nam obcaecati nesciunt laudantium enim ad in! Ratione a quia culpa nisi? Facilis, quam aliquam laudantium neque cum at rerum accusantium voluptatibus exercitationem fuga enim commodi! Optio, atque. Voluptatibus praesentium consequatur, sit nihil aut dicta, ipsum labore maxime, veritatis enim aliquam eligendi iusto autem quam vitae ipsa. Voluptatem magni atque reprehenderit tempore dolorem delectus doloribus sint, debitis, minima ipsa expedita quae possimus eligendi nesciunt officiis rerum fuga. Architecto, est.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

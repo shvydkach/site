@@ -1,0 +1,172 @@
+/* Стилі для показу відповідних дій:  */
+/* транслітерація, посилання, потім - медіа(зображення, відео, аудіо) */
+
+ 
+:root {
+  /* Змінні кольорів */
+  --white: white;
+  --black: black;
+
+  /* Початкове значення змінної висоти */
+  /* Це значення буде змінюватись через adjust-height.js */
+  /* Це тому, що на мобільних пристроях є нижні і верхні панелі, і через них не видно кнопки */
+  --app-height: 100%;
+
+  /* Кореневий розмір шрифту */
+  font-size: 20px;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --white: white;
+    --black: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: black;
+    --black: white;
+  }
+}
+
+[color-scheme="light"] {
+  --white: white;
+  --black: black;
+}
+
+[color-scheme="dark"] {
+  --white: black;
+  --black: white;
+}
+
+
+.reader-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reader-actions-btns {
+  background-color: var(--white);
+  height: 55px;
+  width: 70%;
+  min-width: 180px;
+  max-width: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reader-action-btn {
+  display: inline-block;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.reader-action-btn svg {
+  height: 27px;
+}
+
+.svg-path {
+  fill: var(--black); 
+  stroke: none;
+}
+
+.reader-action-overlay {
+  display: none;
+  opacity: 0;
+}
+
+.reader-action-overlay.reader-action-active {
+  background-color: var(--white);
+  width: 100vw;
+  height: 100vh;
+  height: var(--app-height);
+  z-index: 16;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  display: block; /* <- Буде змінюватись через JS */
+}
+
+.reader-action-close {
+  padding: 5px;
+  position: relative;
+  height: 65px; /* <- Відступи + висота: 5 + 55 + 5 */
+  width: 100%;
+}
+
+.reader-action-close-btn {
+  background-color: var(--white);
+  width: 55px;
+  height: 55px;
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.reader-action-close-btn::before {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%) rotate(45deg);
+  background-color: var(--black);
+}
+
+.reader-action-close-btn::after {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 3px;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+  background-color: var(--black);
+}
+
+.reader-action-main {
+  width: 100%;
+  padding: 10px 15px 30px 15px;
+  height: 100%;
+  overflow: auto;  /* <- Треба це, бо неможливо видовжити */
+
+  /* ПОКРАЩИТИ: не повністю видно контент */
+  /* reader-action-overlay є всередині reader-actions  */
+  /* reader-actions має висоту десь 200px */
+  /* reader-actions знаходиться в нижній частині прочитання новини */
+  /* тому, потім треба буде винисти розмітку reader-action-overlay окремо */
+}
+
+.reader-action-container {
+  width: 100%;
+  height: 100%;
+}
+
+.reader-action-text {
+  width: 100%;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+
+
+
+@media (min-width: 770px) {
+  
+}

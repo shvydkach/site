@@ -156,9 +156,24 @@ function loadContent(data) {
   const readerCloseBtn = document.querySelector(".reader-close-btn")
 
   readerCloseBtn.addEventListener("click", () => {
-    
+    closeReader()
   })
 }
+
+// Схема: 
+// <div class="reader-text-output">
+//   <div class="reader-text-output-word">
+//      Тут розмітка, куди вставляються слова
+//   </div>
+//   <div class="reader-text-output-endmessage">
+//      Тут розмітка для навігації після закінчення прочитання
+//   </div>
+// </div>
+
+// reader-text-output-endmessage
+// reader-text-output-word
+
+
 
 // Запускає "Прочитувач"
 function startReader(clickedBtn) {
