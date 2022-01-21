@@ -3,4 +3,4 @@
 
 localStorage.getItem("wpm") 
   ? null
-  : localStorage.setItem("wpm", 270)
+  : localStorage.setItem("wpm", 240)

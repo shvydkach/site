@@ -5,10 +5,10 @@ const wpmMinusBtn = document.querySelector(".wpm-minus-btn")
 const wpmPlusBtn = document.querySelector(".wpm-plus-btn")
 const wpmText = document.querySelector(".wpm-speed")
 
-// Встановлення  типового значення при завантаженні
+// Встановлення типового значення при завантаженні
 localStorage.getItem("wpm") 
   ? null
-  : localStorage.setItem("wpm", 270)
+  : localStorage.setItem("wpm", 240)
 
 // Встановлення типового значення при завантаженні
 wpmText.innerHTML = localStorage.getItem("wpm")
