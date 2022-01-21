@@ -49,6 +49,10 @@
 }
 
 .reader-actions-btns {
+  display: none;
+}
+
+.reader-actions-btns.reader-actions-btns-active {
   background-color: var(--white);
   height: 55px;
   width: 70%;

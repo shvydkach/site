@@ -15,6 +15,7 @@ import { forUser } from "./reader-reading.js"
 import { openReader } from "./reader.js"
 import { closeReader } from "./reader.js"
 
+import { setActions } from "./reader-actions.js"
 
 
 const newsContainer = document.querySelector(".news")
@@ -150,7 +151,7 @@ function loadContent(data) {
       wordOutput.innerHTML = ``
       openReader()
       showContent()
-      startReader(startBtn)
+      startReader(startBtn.parentElement)
     })
   })
 
@@ -161,95 +162,17 @@ function loadContent(data) {
     closeReader()
     localStorage.setItem("reading", false)
   })
-
-
-  const actionBtnText = document.querySelector(".reader-action-btn-text")
-  const actionBtnLinks = document.querySelector(".reader-action-btn-links")
-  const actionBtnMedia = document.querySelector(".reader-action-btn-media")
-  const actionOverlay = document.querySelector(".reader-action-overlay")
-  const actionOverlayCloseBtn = document.querySelector(".reader-action-close-btn")
-  const actionActionText = document.querySelector(".reader-action-text")
-  const actionActionLinks = document.querySelector(".reader-action-links")
-  const actionActionMedia = document.querySelector(".reader-action-media")
-
-  // Дії (текст, посилання, медіа) можна буде запустити тільки після прочитання новини
-// Тобто тоді, коли відкрито Прочитувач і не прочитується
-
-  actionOverlayCloseBtn.addEventListener("click", () => {
-    actionOverlay.classList.remove("reader-action-overlay-active")
-    actionActionText.classList.remove("reader-action-active")
-    actionActionLinks.classList.remove("reader-action-active")
-    actionActionMedia.classList.remove("reader-action-active")
-  })
-
-  actionBtnText.addEventListener("click", () => {
-    if (localStorage.getItem("reading") == "false") {
-      
-      actionOverlay.classList.add("reader-action-overlay-active")
-
-      actionActionText.innerHTML = `
-      Тестовий текст lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-      <br> <br> <br> <br> <br> <br> <br>
-      `
-
-      actionActionText.classList.add("reader-action-active")
-      actionActionLinks.classList.remove("reader-action-active")
-      actionActionMedia.classList.remove("reader-action-active")
-
-    }
-    else {
-      console.log("Ще не можна")
-    }
-  })
-
-  actionBtnLinks.addEventListener("click", () => {
-    if (localStorage.getItem("reading") == "false") {
-      
-      actionOverlay.classList.add("reader-action-overlay-active")
-
-      actionActionText.classList.remove("reader-action-active")
-      actionActionLinks.classList.add("reader-action-active")
-      actionActionMedia.classList.remove("reader-action-active")
-    }
-    else {
-      console.log("Ще не можна")
-    }
-  })
-
-  actionBtnMedia.addEventListener("click", () => {
-    if (localStorage.getItem("reading") == "false") {
-      
-      actionOverlay.classList.add("reader-action-overlay-active")
-
-      actionActionLinks.innerHTML = `
-        <div class="reader-action-link">
-          <div class="reader-action-link-title">
-            Оригінальне інтерв'ю:
-          </div>
-          <div class="reader-action-link-url">
-            <a href="https://instagram.com/shvydkach" target="_blank"> 
-              https://instagram.com/shvydkach 
-            </a>
-          </div>
-        </div>
-        <br> <br> <br> <br> <br> <br> <br>
-      `
-
-      actionActionText.classList.remove("reader-action-active")
-      actionActionLinks.classList.remove("reader-action-active")
-      actionActionMedia.classList.add("reader-action-active")
-    }
-    else {
-      console.log("Ще не можна")
-    }
-  })
-
+  
 }
 
 
 // Запускає "Прочитувач"
-function startReader(clickedBtn) {
-  // clickedBtn - це кнопка "Старт прочитання" (трикутник)
+function startReader(novynaElement) {
+  // novynaElement - це div, який зберігає дані через dataset
+  // Може передаватись або:
+  // 1. Кнопка запуску (трикутник) з головної сторінки
+  // 2. Навігаційні кнопки (попередня, наступна) після прочитання новини
+
 
   // console.log(clickedBtn.parentElement.nextSibling)
   // console.log(clickedBtn.parentElement.previousSibling)
@@ -259,13 +182,14 @@ function startReader(clickedBtn) {
   //   console.log(clickedBtn.parentElement.previousSibling)
   // }
 
-  //  Div, до якого належить ця кнопка. Він зберігає дані через dataset
-  const novynaEl = clickedBtn.parentElement
+  
   
   // Дані (текст, посилання) отримані з div
-  // ПОТІМ: отримання медіа, так само
-  const content = novynaEl.dataset.content
-  const links = novynaEl.dataset.links
+  const content = novynaElement.dataset.content
+  const links = novynaElement.dataset.links
+  
+  // ДОРОБИТИ: отримання та використання медіа
+  // const media = novynaElement.dataset.media
   
   const wordsSplitted = splitBySpaces(content)
   const wordsToRead = forComp(wordsSplitted)
@@ -273,10 +197,10 @@ function startReader(clickedBtn) {
   
   showing(wordsToRead) 
 
-  // ДОДАТИ потім: керування станами
-  // if (canStartAgain) {
-  //   showing(words)  
-  // }
+  // Навігація 
+
+  // Дії
+  setActions(content, links)
 }
 
 
@@ -284,11 +208,15 @@ function startReader(clickedBtn) {
 // Елемент в який 'щосекунди' буде вставлятись слово
 const wordOutput = document.querySelector(".reader-text-output-word")
 
+// Значки-кнопки для дій з новиною (текст, посилання, потім - медіа)
+// При прочитанні вони мають
+const actionBtns = document.querySelector(".reader-actions-btns")
 
 function showing(input) {
   // input - масив з розподілених слів, отриманих за допомогою forComp
 
   showContent()
+  actionBtns.classList.remove("reader-actions-btns-active")
 
   let counter = -1
   localStorage.setItem("reading", true)
@@ -350,6 +278,8 @@ function showing(input) {
         wordOutput.innerHTML = ``
         localStorage.setItem("reading", false)
         showNavigation()
+        actionBtns.classList.add("reader-actions-btns-active")
+
       }
     }, getWpm())
   } 
@@ -357,7 +287,6 @@ function showing(input) {
     console.log("Немає вхідних даних")
   }
 }
-
 
 
 const outputEndmessage = document.querySelector(".reader-text-output-endmessage")

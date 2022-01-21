@@ -5,10 +5,12 @@
     "category": "Світ",
     "links":[
       {
-        "Посилання": "https: //іншийсайт1.тест"
+        "title": "Інстаграм",
+        "url": "https://instagram.com/shvydkach"
       },
       {
-        "Посилання 2": "https: //іншийсайт2.тест"
+        "title": "Твіттер",
+        "url": "https://twitter.com/shvydkach"
       }
     ]
   },
@@ -16,14 +18,7 @@
     "title": "Азія нещодавно lorem ipsum dolor sit amet.",
     "content": "Тестова новина 2. Категорія Світ. Lorem ",
     "category": "Світ",
-    "links":[
-      {
-        "Посилання": "https: //іншийсайт1.тест"
-      },
-      {
-        "Посилання 2": "https: //іншийсайт2.тест"
-      }
-    ]
+    "links":[ ]
   },
   {
     "title": "У Франції lorem ipsum dolor sit amet.",
@@ -31,10 +26,8 @@
     "category": "Світ",
     "links":[
       {
-        "Посилання": "https: //іншийсайт1.тест"
-      },
-      {
-        "Посилання 2": "https: //іншийсайт2.тест"
+        "title": "Про нас",
+        "url": "https://shvydkach.com/project.html"
       }
     ]
   }
