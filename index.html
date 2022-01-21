@@ -156,14 +156,21 @@
     <div class="reader-text">
       <div class="reader-text-container">
         <div class="reader-text-output">
-          <span class="reader-text-output-word">
+          
+          <!-- Вихідне 1. Контент.
+          Місце для всталення контенту, змісту новини коли вона показується  
+          активується класом: reader-text-output-word-active -->
+          <span class="reader-text-output-word reader-text-output-word-active">
             <span class="focused">
               <span class="letter letter1">Швид</span>
               к
               <span class="letter letter2">очитач</span>
             </span>
           </span>
-          <!-- Навігація. Буде показуватись в кінці новини, тобто після прочитання -->
+
+          <!-- Вихідне 2. Навігація. 
+          Буде показуватись в кінці новини, тобто після прочитання 
+          активується класом: reader-text-output-endmessage-active -->
           <div class="reader-text-output-endmessage">
             <span class="reader-text-output-endmessage-next"> 
               Наступна <span class="reader-endmessage-arrow"></span> 
@@ -172,6 +179,7 @@
               Попередня <span class="reader-endmessage-arrow"></span>
             </span>
           </div>
+
         </div>
       </div>
     </div>
@@ -190,7 +198,7 @@
             </g>
           </svg>
         </span>
-        <span class="reader-action-btn reader-action-btn-link">
+        <span class="reader-action-btn reader-action-btn-links">
           <svg id="svg-link" viewBox="0 0 21.2 26.5">
             <g transform="translate(1885.6735,-1620.286)">
               <path

@@ -253,8 +253,8 @@ main.blurried-for-reading {
 
 
 .reader-text-output-word.reader-text-output-word-active {
-  position: relative;
   display: block; 
+  position: relative;
   width: 100%;
   height: auto;
 }

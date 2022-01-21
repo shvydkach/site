@@ -1,5 +1,3 @@
-
-
 // Елемент reader завжди є на сторінці (у розмітці)
 // Тому, він не залежить від асинхронності fetcher.js
 
@@ -26,6 +24,7 @@ export function closeReader() {
   bodyEl.classList.remove("locked-for-reading")
   mainEl.classList.remove("blurried-for-reading")
   localStorage.setItem("reader-opened", false)
+  localStorage.setItem("reading", false)
 }
 
 readerCloseBtn.addEventListener("click", () => {

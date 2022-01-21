@@ -147,7 +147,9 @@ function loadContent(data) {
   // Коли натискається кнопка "Старт прочитання" (трикутник)
   startBtns.forEach(startBtn => {
     startBtn.addEventListener("click", () => {
+      wordOutput.innerHTML = ``
       openReader()
+      showContent()
       startReader(startBtn)
     })
   })
@@ -157,27 +159,105 @@ function loadContent(data) {
 
   readerCloseBtn.addEventListener("click", () => {
     closeReader()
+    localStorage.setItem("reading", false)
   })
+
+
+  const actionBtnText = document.querySelector(".reader-action-btn-text")
+  const actionBtnLinks = document.querySelector(".reader-action-btn-links")
+  const actionBtnMedia = document.querySelector(".reader-action-btn-media")
+  const actionOverlay = document.querySelector(".reader-action-overlay")
+  const actionOverlayCloseBtn = document.querySelector(".reader-action-close-btn")
+  const actionActionText = document.querySelector(".reader-action-text")
+  const actionActionLinks = document.querySelector(".reader-action-links")
+  const actionActionMedia = document.querySelector(".reader-action-media")
+
+  // Дії (текст, посилання, медіа) можна буде запустити тільки після прочитання новини
+// Тобто тоді, коли відкрито Прочитувач і не прочитується
+
+  actionOverlayCloseBtn.addEventListener("click", () => {
+    actionOverlay.classList.remove("reader-action-overlay-active")
+    actionActionText.classList.remove("reader-action-active")
+    actionActionLinks.classList.remove("reader-action-active")
+    actionActionMedia.classList.remove("reader-action-active")
+  })
+
+  actionBtnText.addEventListener("click", () => {
+    if (localStorage.getItem("reading") == "false") {
+      
+      actionOverlay.classList.add("reader-action-overlay-active")
+
+      actionActionText.innerHTML = `
+      Тестовий текст lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+      <br> <br> <br> <br> <br> <br> <br>
+      `
+
+      actionActionText.classList.add("reader-action-active")
+      actionActionLinks.classList.remove("reader-action-active")
+      actionActionMedia.classList.remove("reader-action-active")
+
+    }
+    else {
+      console.log("Ще не можна")
+    }
+  })
+
+  actionBtnLinks.addEventListener("click", () => {
+    if (localStorage.getItem("reading") == "false") {
+      
+      actionOverlay.classList.add("reader-action-overlay-active")
+
+      actionActionText.classList.remove("reader-action-active")
+      actionActionLinks.classList.add("reader-action-active")
+      actionActionMedia.classList.remove("reader-action-active")
+    }
+    else {
+      console.log("Ще не можна")
+    }
+  })
+
+  actionBtnMedia.addEventListener("click", () => {
+    if (localStorage.getItem("reading") == "false") {
+      
+      actionOverlay.classList.add("reader-action-overlay-active")
+
+      actionActionLinks.innerHTML = `
+        <div class="reader-action-link">
+          <div class="reader-action-link-title">
+            Оригінальне інтерв'ю:
+          </div>
+          <div class="reader-action-link-url">
+            <a href="https://instagram.com/shvydkach" target="_blank"> 
+              https://instagram.com/shvydkach 
+            </a>
+          </div>
+        </div>
+        <br> <br> <br> <br> <br> <br> <br>
+      `
+
+      actionActionText.classList.remove("reader-action-active")
+      actionActionLinks.classList.remove("reader-action-active")
+      actionActionMedia.classList.add("reader-action-active")
+    }
+    else {
+      console.log("Ще не можна")
+    }
+  })
+
 }
-
-// Схема: 
-// <div class="reader-text-output">
-//   <div class="reader-text-output-word">
-//      Тут розмітка, куди вставляються слова
-//   </div>
-//   <div class="reader-text-output-endmessage">
-//      Тут розмітка для навігації після закінчення прочитання
-//   </div>
-// </div>
-
-// reader-text-output-endmessage
-// reader-text-output-word
-
 
 
 // Запускає "Прочитувач"
 function startReader(clickedBtn) {
-  // clickedBtn кнопка "Старт прочитання" (трикутник)
+  // clickedBtn - це кнопка "Старт прочитання" (трикутник)
+
+  // console.log(clickedBtn.parentElement.nextSibling)
+  // console.log(clickedBtn.parentElement.previousSibling)
+  // if (!clickedBtn.parentElement.previousSibling) {
+  //   console.log(clickedBtn.parentElement)
+  // } else {
+  //   console.log(clickedBtn.parentElement.previousSibling)
+  // }
 
   //  Div, до якого належить ця кнопка. Він зберігає дані через dataset
   const novynaEl = clickedBtn.parentElement
@@ -204,16 +284,28 @@ function startReader(clickedBtn) {
 // Елемент в який 'щосекунди' буде вставлятись слово
 const wordOutput = document.querySelector(".reader-text-output-word")
 
+
 function showing(input) {
   // input - масив з розподілених слів, отриманих за допомогою forComp
 
+  showContent()
+
   let counter = -1
+  localStorage.setItem("reading", true)
 
   if (input.length > 0) {
     const interval = setInterval(() => {
       if (counter !== input.length - 1) {
+
+          // Якщо перестає читатись (натиснута кнопка закриття прочитувача)
+          // "false" в лапках, бо localStorage зберігає його як рядок
+          if (localStorage.getItem("reading") == "false") {
+            clearInterval(interval)
+            wordOutput.innerHTML = ``
+            // Не треба показувати навігацію
+          }
+
           counter++   
-          // canStartAgain = false
 
           // Слово, що має прочитуватись
           let currentWord = input[counter]
@@ -253,16 +345,33 @@ function showing(input) {
           }
       } 
       else {
+        // Закінчення прочитання
         clearInterval(interval)
-        // canStartAgain = true
+        wordOutput.innerHTML = ``
+        localStorage.setItem("reading", false)
+        showNavigation()
       }
     }, getWpm())
   } 
   else {
-    output.innerHTML = "Немає вхідних даних"
+    console.log("Немає вхідних даних")
   }
 }
 
+
+
+const outputEndmessage = document.querySelector(".reader-text-output-endmessage")
+const outputWord = document.querySelector(".reader-text-output-word")
+
+function showNavigation() {
+  outputEndmessage.classList.add("reader-text-output-endmessage-active")
+  outputWord.classList.remove("reader-text-output-word-active")
+}
+
+function showContent() {
+  outputEndmessage.classList.remove("reader-text-output-endmessage-active")
+  outputWord.classList.add("reader-text-output-word-active")
+}
 
 
 
