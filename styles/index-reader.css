@@ -143,13 +143,17 @@ main.blurried-for-reading {
 }
 
 .reader-text-output-endmessage {
+  display: none;
+}
+
+.reader-text-output-endmessage.reader-text-output-endmessage-active {
   background-color: var(--white);
   color: var(--black);
   font-size: 1.2rem;
   width: 100%;
   min-height: 100px;
   height: 100%;
-  display: block; /* <- Буде змінюватись через JS */
+  display: block; 
 }
 
 .reader-text-output-endmessage-next {
@@ -240,11 +244,17 @@ main.blurried-for-reading {
 
 
 
-
 /* Стилі для слова, що показується */
+
+
 .reader-text-output-word {
+  display: none;
+}
+
+
+.reader-text-output-word.reader-text-output-word-active {
   position: relative;
-  display: none; /* ПРИБРАТИ !*/ /* <- Буде змінюватись через JS */
+  display: block; 
   width: 100%;
   height: auto;
 }
