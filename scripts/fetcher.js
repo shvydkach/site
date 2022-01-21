@@ -193,14 +193,14 @@ function startReader(novynaElement) {
   
   const wordsSplitted = splitBySpaces(content)
   const wordsToRead = forComp(wordsSplitted)
-  const wordsForTransliteration = forUser(wordsSplitted)
+  const transliteration = forUser(wordsSplitted)
   
   showing(wordsToRead) 
 
   // Навігація 
 
   // Дії
-  setActions(content, links)
+  setActions(transliteration, links)
 }
 
 

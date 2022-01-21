@@ -11,7 +11,7 @@ const actionActionLinks = document.querySelector(".reader-action-links")
 const actionActionMedia = document.querySelector(".reader-action-media")
 
 // Буде виконуватись з fetcher.js в функції startReader
-export function setActions(content, links) {
+export function setActions(text, links) {
   
   actionOverlayCloseBtn.addEventListener("click", () => {
     actionOverlay.classList.remove("reader-action-overlay-active")
@@ -26,7 +26,7 @@ export function setActions(content, links) {
       actionOverlay.classList.add("reader-action-overlay-active")
   
       actionActionText.innerHTML = `
-        ${content}
+        ${text}
         <br> <br> <br> <br> <br> <br> <br>
       `
   
