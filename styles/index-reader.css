@@ -151,9 +151,11 @@ main.blurried-for-reading {
   color: var(--black);
   font-size: 1.2rem;
   width: 100%;
-  min-height: 100px;
+  min-height: 140px;
   height: 100%;
+  user-select: none;
   display: block; 
+  transition: all 0.3s ease;
 }
 
 .reader-text-output-endmessage-next {
@@ -161,7 +163,7 @@ main.blurried-for-reading {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: 70px;
   cursor: pointer;
 }
 
@@ -204,7 +206,7 @@ main.blurried-for-reading {
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: 70px;
   padding-right: 60px; /* <- Для того, щоб вирівняти з верхнім */
   cursor: pointer;
 }
@@ -245,8 +247,6 @@ main.blurried-for-reading {
 
 
 /* Стилі для слова, що показується */
-
-
 .reader-text-output-word {
   display: none;
 }

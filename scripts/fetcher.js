@@ -172,17 +172,6 @@ function startReader(novynaElement) {
   // Може передаватись або:
   // 1. Кнопка запуску (трикутник) з головної сторінки
   // 2. Навігаційні кнопки (попередня, наступна) після прочитання новини
-
-
-  // console.log(clickedBtn.parentElement.nextSibling)
-  // console.log(clickedBtn.parentElement.previousSibling)
-  // if (!clickedBtn.parentElement.previousSibling) {
-  //   console.log(clickedBtn.parentElement)
-  // } else {
-  //   console.log(clickedBtn.parentElement.previousSibling)
-  // }
-
-  
   
   // Дані (текст, посилання) отримані з div
   const content = novynaElement.dataset.content
@@ -196,12 +185,59 @@ function startReader(novynaElement) {
   const transliteration = forUser(wordsSplitted)
   
   showing(wordsToRead) 
-
+  
   // Навігація 
+  // console.log(novynaElement.nextSibling)
+  // console.log(novynaElement.previousSibling)
+  // if (!novynaElement.previousSibling) {
+  //   console.log(novynaElement)
+  // } else {
+  //   console.log(novynaElement.previousSibling)
+  // }
 
+  const nextNovynaBtn = document.querySelector(".reader-text-output-endmessage-next")
+  const prevNovynaBtn = document.querySelector(".reader-text-output-endmessage-prev")
+
+  nextNovynaBtn.addEventListener("click", () => {
+    if (localStorage.getItem("reading") == "false") {
+      if (!novynaElement.nextSibling) {
+        wordOutput.innerHTML = ``
+        showContent()
+        // Якщо немає наступної новини, тобто це остання новина в списку
+        // , то запустити ще раз цю ж новину
+        startReader(novynaElement)
+      } else {
+        wordOutput.innerHTML = ``
+        showContent()
+        startReader(novynaElement.nextSibling)
+      }
+    }
+  })
+  
+  prevNovynaBtn.addEventListener("click", () => {
+    if (localStorage.getItem("reading") == "false") {
+      if (!novynaElement.previousSibling) {
+        wordOutput.innerHTML = ``
+        showContent()
+        // Якщо немає попередньої новини, тобто це перша новина в списку
+        // , то запустити ще раз цю ж новину
+        startReader(novynaElement)
+      } else {
+        wordOutput.innerHTML = ``
+        showContent()
+        startReader(novynaElement.previousSibling)
+      }
+    }
+  })
+
+  wordOutput.innerHTML = ``
+  showContent()
+  // startReader(startBtn.parentElement)
+  
   // Дії
   setActions(transliteration, links)
 }
+
 
 
 
