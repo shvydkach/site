@@ -5,6 +5,7 @@ import getDataSport from "./fetch-sport.js"
 import getDataEconomics from "./fetch-economics.js"
 import getDataScience from "./fetch-science.js"
 import getDataCulture from "./fetch-culture.js"
+import getDataOther from "./fetch-other.js"
 
 import { getWpm } from "./reader-reading.js"
 import { focusIndex } from "./reader-reading.js"
@@ -60,7 +61,10 @@ switch (localStorage.getItem("category-active")) {
       .catch(err => console.log(err))
     break;
   case "Різне":
-    console.log("Вибрано різне")
+    // ПОКРАЩИТИ: зробити функцію для створення розділу "Різне" з інших новин
+    getDataOther()
+      .then(dataOther => loadContent(dataOther))
+      .catch(err => console.log(err))
     break;
   default:
     console.log("Якась помилка")
@@ -108,7 +112,9 @@ categories.forEach(categoryBtn => {
           .catch(err => console.log(err))
         break;
       case "Різне":
-        console.log("Вибрано різне")
+        getDataOther()
+          .then(dataOther => loadContent(dataOther))
+          .catch(err => console.log(err))
         break;
       default:
         console.log("Якась помилка")
@@ -187,14 +193,6 @@ function startReader(novynaElement) {
   showing(wordsToRead) 
   
   // Навігація 
-  // console.log(novynaElement.nextSibling)
-  // console.log(novynaElement.previousSibling)
-  // if (!novynaElement.previousSibling) {
-  //   console.log(novynaElement)
-  // } else {
-  //   console.log(novynaElement.previousSibling)
-  // }
-
   const nextNovynaBtn = document.querySelector(".reader-text-output-endmessage-next")
   const prevNovynaBtn = document.querySelector(".reader-text-output-endmessage-prev")
 
@@ -232,7 +230,6 @@ function startReader(novynaElement) {
 
   wordOutput.innerHTML = ``
   showContent()
-  // startReader(startBtn.parentElement)
   
   // Дії
   setActions(transliteration, links)
@@ -338,9 +335,6 @@ function showContent() {
   outputWord.classList.add("reader-text-output-word-active")
 }
 
-
-
-// Допоміжні функції:
 
 function createNovynaElement(novynaDataArr) {
   /*

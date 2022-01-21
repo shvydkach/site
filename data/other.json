@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Нещодавно Рада lorem ipsum dolor sit.",
+    "content": "Тестова новина 1. Категорія Уряд. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "category": "Уряд",
+    "links":[
+      {
+        "Посилання": "https: //іншийсайт1.тест"
+      },
+      {
+        "Посилання 2": "https: //іншийсайт2.тест"
+      }
+    ]
+  }
+]
