@@ -1,40 +1,16 @@
 [
   {
-    "title": "Економісти кажуть lorem ipsum dolor sit amet consectetur.",
-    "content": "Тестова новина 1. Категорія Економіка. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "title": "НБУ зміцнив курс гривні щодо долару на 8 копійок",
+    "content": "На п'ятницю [ 21 січня] Національний банк України встановив офіційний курс гривні щодо долару на рівні [ 28,32 грн/$ ] . Про це повідомляє сайт НБУ. Євро за курсом НБУ коштує [ 32,11 ] грн.",
     "category": "Економіка",
     "links":[
       {
-        "Посилання": "https: //іншийсайт1.тест"
+        "title": "Стаття на сайті Еспресо",
+        "url": "https://espreso.tv/nbu-zmitsniv-kurs-grivni-shchodo-dolaru-na-8-kopiyok"
       },
       {
-        "Посилання 2": "https: //іншийсайт2.тест"
-      }
-    ]
-  },
-  {
-    "title": "Економісти заявляють lorem ipsum dolor sit amet consectetur.",
-    "content": "Тестова новина 2. Категорія Економіка. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
-    "category": "Економіка",
-    "links":[
-      {
-        "Посилання": "https: //іншийсайт1.тест"
-      },
-      {
-        "Посилання 2": "https: //іншийсайт2.тест"
-      }
-    ]
-  },
-  {
-    "title": "Міністерство економісти кажуть lorem ipsum dolor.",
-    "content": "Тестова новина 3. Категорія Економіка. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
-    "category": "Економіка",
-    "links":[
-      {
-        "Посилання": "https: //іншийсайт1.тест"
-      },
-      {
-        "Посилання 2": "https: //іншийсайт2.тест"
+        "title": "Офіційний курс НБУ ",
+        "url": "https://bank.gov.ua/ua/markets/exchangerates?date=21.01.2022&period=daily"
       }
     ]
   }

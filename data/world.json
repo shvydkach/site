@@ -1,33 +1,34 @@
 [
   {
-    "title": "У світі lorem ipsum dolor sit amet consectetur.",
-    "content": "Тестова новина 1. Категорія Світ. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "title": "У Чехії виявили фрагмент скульптури, якій близько 7 тисяч років",
+    "content": "У чеському місті Їчині під час археологічного дослідження виявили фрагмент керамічної скульптури епохи неоліту якій близько 7 тисяч років. Про це повідомляє Radio Prague International. Знайдений артефакт це частина лівої руки скульптури. Виявлення інших фрагментів скульптури епохи кам'яної доби археологи вважають малоймовірним.",
     "category": "Світ",
     "links":[
       {
-        "title": "Інстаграм",
-        "url": "https://instagram.com/shvydkach"
-      },
-      {
-        "title": "Твіттер",
-        "url": "https://twitter.com/shvydkach"
+        "title": "Стаття на сайті Еспресо",
+        "url": "https://espreso.tv/znakhidka-epokhi-neolitu-u-chekhii-viyavili-fragment-skulpturi-yakiy-blizko-7-tis-rokiv"
       }
     ]
   },
   {
-    "title": "Азія нещодавно lorem ipsum dolor sit amet.",
-    "content": "Тестова новина 2. Категорія Світ. Lorem ",
-    "category": "Світ",
-    "links":[ ]
-  },
-  {
-    "title": "У Франції lorem ipsum dolor sit amet.",
-    "content": "Тестова новина 3. Категорія Світ. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "title": "WhatsApp випробовує функцію паузи для голосових повідомлень",
+    "content": "Месенджер WhatsApp почав Beta-тестування нової функції яка дає змогу поставити на паузу запис голосових повідомлень. Про це пише [ Gadgets 360 ] . Так користувачі зможуть прослуховувати свої голосові повідомлення перед відправкою. Видання зазначає що ця функція замінила кнопку зупинки голосового повідомлення яка вимагала слухати весь запис.",
     "category": "Світ",
     "links":[
       {
-        "title": "Про нас",
-        "url": "https://shvydkach.com/project.html"
+        "title": "Стаття на сайті Еспресо",
+        "url": "https://espreso.tv/whatsapp-viprobovue-funktsiyu-pauzi-dlya-golosovikh-povidomlen"
+      }
+    ]
+  },
+  {
+    "title": "Японія розробила робота зі штучним інтелектом, який зможе затримувати правопорушників",
+    "content": "Японська безпекова компанія SECOM створила робота Сocobo котрий стежитиме за правопорядком у громадських місцях. Про це пише Designboom. Робот може працювати автономно та містить систему штучного інтелекту для інспектування територій. Максимальна швидкість Сocobo становить  6 [ км/год ] . Робот може працювати три години на одній зарядці а також контролює рівень використання електроенергії та самостійно повертається до зарядного пристрою коли це необхідно.",
+    "category": "Світ",
+    "links":[
+      {
+        "title": "Стаття на сайті Еспресо",
+        "url": "https://espreso.tv/yaponiya-rozrobila-robota-zi-shtuchnim-intelektom-yakiy-zmozhe-zatrimuvati-pravoporushnikiv"
       }
     ]
   }

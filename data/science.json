@@ -1,40 +1,35 @@
 [
   {
-    "title": "Науковці lorem ipsum dolor sit.",
-    "content": "Тестова новина 1. Категорія Наука. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "title": "Компанія SpaceX вивела на орбіту український супутник",
+    "content": "У четвер [ 13 січня ] відбувся запуск українського космічного апарата [ Січ-2-30 ] з ракетою-носієм [ Falcon 9 ] у межах місії [ Transporter 3] . Супутник  [ Січ-2-30 ] виготовлений конструкторським бюро Південне з міста Дніпро для моніторингу використання земель рослинності лісових і водних ресурсів а також ліквідації наслідків стихійних лих. З його допомогою можна буде отримувати дані про створення інженерних споруд, переміщення військової техніки та кораблів. Загальна маса супутника становить [ 170 кг ] a маса корисного навантаження [ 40 кг ] .",
     "category": "Наука",
     "links":[
       {
-        "Посилання": "https: //іншийсайт1.тест"
+        "title": "Стаття на сайті Еспресо",
+        "url": "https://espreso.tv/sogodni-kompaniya-spacex-vivede-na-orbitu-ukrainskiy-suputnik-sich-2-30"
       },
       {
-        "Посилання 2": "https: //іншийсайт2.тест"
+        "title": "Трансляція українською (канал Альфа Центавра)",
+        "url": "https://youtu.be/CNfsWcm_lrY"
+      },
+      {
+        "title": "Офіційна трансляція (від SpaceX)",
+        "url": "https://www.youtube.com/watch?v=mFBeuSAvhUQ"
       }
     ]
   },
   {
-    "title": "Вчені з університету lorem ipsum dolor sit amet consectetur.",
-    "content": "Тестова новина 2. Категорія Наука. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "title": "Біля берегів Таїті виявили недоторканий кораловий риф",
+    "content": "Вчені виявили трьох кілометровий недоторканий кораловий риф біля узбережжя тихоокеанського острова Таїті що входить до складу французької Полінезії. Морські дослідники знайшли гігантський кораловий риф на глибині 30 метрів. Як повідомляє ООН [ з питань ] освіти науки і культури яка очолювала місію [ - це один ] із найбільших рифів знайдених на такій глибині. Вчені підкреслили що бездоганний стан їхньої знахідки без жодних доказів того що він постраждав від кліматичної кризи свідчить про необхідність термінових заходів для захисту здорових рифів океану що ще залишилися.",
     "category": "Наука",
     "links":[
       {
-        "Посилання": "https: //іншийсайт1.тест"
+        "title": "Стаття на сайті Еспресо",
+        "url": "https://espreso.tv/bilya-beregiv-taiti-viyavili-3-kilometroviy-nedotorkaniy-koraloviy-rif"
       },
       {
-        "Посилання 2": "https: //іншийсайт2.тест"
-      }
-    ]
-  },
-  {
-    "title": "Стало відомо, як саме lorem ipsum dolor sit consectetur.",
-    "content": "Тестова новина 3. Категорія Наука. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
-    "category": "Наука",
-    "links":[
-      {
-        "Посилання": "https: //іншийсайт1.тест"
-      },
-      {
-        "Посилання 2": "https: //іншийсайт2.тест"
+        "title": "Підводна зйомка",
+        "url": "https://youtu.be/ulE6cxjB9hI"
       }
     ]
   }

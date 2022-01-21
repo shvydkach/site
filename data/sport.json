@@ -1,40 +1,23 @@
 [
   {
-    "title": "Відомий спортсмен lorem ipsum dolor sit amet consectetur.",
-    "content": "Тестова новина 1. Категорія Спорт. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "title": "Шевченко веде переговори зі збірною Польщі, - ЗМІ",
+    "content": "Колишній тренер збірної України та італійського клубу Дженоа Андрій Шевченко може очолити національну команду Польщі. Про це повідомляє vZbirna. За інформацією джерела Шевченко справді може очолити збірну Польщі і сторони вирішують фінансове питання. Зараз обговорюється використання схеми преміальних за вихід на Чемпіонат світу або компенсованих від Дженоа коштів. Збірна Польщі залишилася без тренера після відставки португальця Паулу Соузи який очолив бразильський Фламенго.",
     "category": "Спорт",
     "links":[
       {
-        "Посилання": "https: //іншийсайт1.тест"
-      },
-      {
-        "Посилання 2": "https: //іншийсайт2.тест"
+        "title": "Стаття на сайті Еспресо",
+        "url": "https://espreso.tv/shevchenko-vede-peregovori-zi-zbirnoyu-polshchi-zmi"
       }
     ]
   },
   {
-    "title": "Хокейна ліга lorem ipsum dolor consectetur.",
-    "content": "Тестова новина 2. Категорія Спорт. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "title": "Роналду влаштував демарш після заміни у матчі чемпіонату Англії",
+    "content": "Португальський футболіст Манчестер Юнайтед Кріштіану Роналду жбурнув на землю куртку після заміни у матчі проти Брентфорда. Про це повідомляє BBC Sport. На [ 71-ій ] хвилині головний тренер МЮ Ральф Рангнік замінив Кріштіану Роналду на захисника Гаррі Магвайра. Португалець розлютився через це рішення та після того як залишив поле жбурнув на землю передану йому куртку та сів на сходинки поруч з кріслами запасних. Тренер після гри назвав таку реакцію футболіста природною.",
     "category": "Спорт",
     "links":[
       {
-        "Посилання": "https: //іншийсайт1.тест"
-      },
-      {
-        "Посилання 2": "https: //іншийсайт2.тест"
-      }
-    ]
-  },
-  {
-    "title": "Футболіст, якого lorem ipsum dolor sit amet.",
-    "content": "Тестова новина 3. Категорія Спорт. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
-    "category": "Спорт",
-    "links":[
-      {
-        "Посилання": "https: //іншийсайт1.тест"
-      },
-      {
-        "Посилання 2": "https: //іншийсайт2.тест"
+        "title": "Стаття на сайті Еспресо",
+        "url": "https://espreso.tv/ronaldu-vlashtuvav-demarsh-pislya-zamini-u-matchi-chempionatu-anglii"
       }
     ]
   }

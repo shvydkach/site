@@ -1,40 +1,16 @@
 [
   {
-    "title": "Нещодавно Рада lorem ipsum dolor sit.",
-    "content": "Тестова новина 1. Категорія Уряд. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
+    "title": "Змінено порядок держреєстрації і зняття з обліку автомобілів",
+    "content": "Кабмін схвалив постанову щодо вдосконалення порядку перереєстрації автомобілів, відомості про власників яких містяться в Єдиному реєстрі боржників. Як зазначила заступниця міністра юстиції з питань європейської інтеграції Валерія Коломієць  : сьогодні положення відповідного Порядку не кореспондуються з положеннями законів України які надають права заставо-держателям на продаж заставного майна тобто автомобілів які були передані в заставу саме цьому окремому кредитору. Відтепер покупці предмета обтяження зможуть безперешкодно реєструвати придбаний транспортний засіб а кредитори – реалізовувати своє право на продаж та реєстрацію за новим власником предмета забезпечу--вального обтяження",
     "category": "Уряд",
     "links":[
       {
-        "Посилання": "https: //іншийсайт1.тест"
-      },
+        "title": "Повідомлення Міністерства юстиції",
+        "url": "https://minjust.gov.ua/news/ministry/valeriya-kolomiets-uryad-shvaliv-postanovu-schodo-vdoskonalennya-poryadku-perereestratsii-avtomobiliv-vidomosti-pro-vlasnikiv-yakih-mistyatsya-v-edinomu-reestri-borjnikiv"
+      }, 
       {
-        "Посилання 2": "https: //іншийсайт2.тест"
-      }
-    ]
-  },
-  {
-    "title": "У Раді lorem ipsum dolor sit amet consectetur.",
-    "content": "Тестова новина 2. Категорія Уряд. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
-    "category": "Уряд",
-    "links":[
-      {
-        "Посилання": "https: //іншийсайт1.тест"
-      },
-      {
-        "Посилання 2": "https: //іншийсайт2.тест"
-      }
-    ]
-  },
-  {
-    "title": "Стало відомо, коли міністр lorem ipsum dolor sit.",
-    "content": "Тестова новина 3. Категорія Уряд. Lorem ipsum dolor [sit amet] consectetur adipisicing elit. Veniam [totam cumque] molestiae laudantium voluptatum accusantium a hic reiciendis sed eos.",
-    "category": "Уряд",
-    "links":[
-      {
-        "Посилання": "https: //іншийсайт1.тест"
-      },
-      {
-        "Посилання 2": "https: //іншийсайт2.тест"
+        "title": "Стаття на сайті Еспресо",
+        "url": "https://espreso.tv/uryad-zminiv-poryadok-derzhreestratsii-i-znyattya-z-obliku-avtomobiliv"
       }
     ]
   }
