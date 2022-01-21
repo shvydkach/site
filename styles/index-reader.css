@@ -4,7 +4,7 @@
   --black: black;
 
   /* Змінна кольору букви, на якій фокусується */
-  --focus-letter-color: orangered;
+  --focus-letter-color: var(--black);
 
   /* Початкове значення змінної висоти */
   /* Це значення буде змінюватись через adjust-height.js */
